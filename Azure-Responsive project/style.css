@@ -1,0 +1,61 @@
+
+@font-face {
+    font-family: "latest1";
+    src: url(Fonts/latest\ \(1\).woff2);
+}
+@font-face {
+    font-family: "latest";
+    src: url(Fonts/latest.woff2);
+}
+@font-face {
+    font-family: "font-icon";
+    src: url(Fonts/MWFFluentIcons.woff2);
+}
+body{
+    padding:0;
+    margin: 0;
+    font-family:"latest" ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5rem;
+    letter-spacing: -0.03em;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    padding:20px 25px;
+    align-items: center;
+}
+.hamburger img{
+    font-family: 'font-icon';
+    width:20px;
+    height:20px;
+    line-height: 1px;
+    margin-right:16px;
+}
+.hamburger{
+    padding-top: 7px;
+}
+.Application{
+    /* padding-bottom: 0px; */
+}
+.logo-text{
+    font-size: 18px;
+    color:#1a1a1f;
+    /* line-height: 44px; */
+}
+.header-left{
+    display: flex;
+    align-items: center;
+}
+.header-right{
+    display:flex;
+    align-items: center;
+}
+.sign-in{
+    font-family: 'latest1';
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 6px;
+}
