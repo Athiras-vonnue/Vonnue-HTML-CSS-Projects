@@ -12,7 +12,7 @@
             <div id="header-items">
                 <div class="topbar-left">
             <div id="logo">
-                <img class="logo2" src="Assets/images/airbnb-logo-2.svg"Airbnb Logo">
+                <img class="logo2" src="Assets/images/airbnb-logo-2.svg"alt="Airbnb Logo">
                 <img class="logo1" src="Assets/images/airbnb-logo.svg" alt="arbnb-logo">
             </div>
             </div>
@@ -22,15 +22,17 @@
                 </div>            
                 <div class=items>
                     <a href="">Anywhere</a><br/>
-                    <span class="line"></span>
+                    <!-- <span class="line"></span> -->
+                    <!-- <div style="display:flex"> -->
                     <a href="" class="item-down">Any week
-                    </a><span>.</span>
-                    <span class="line"></span>
+                    </a><span>•</span>
+                    <!-- <span class="line"></span> -->
                     <a href="" class="item-down addguests">Add guests</a>   
 
                     <div class="tab-search">
                         <img src="Assets/images/search-icon.svg" alt="search-icon">
                     </div>
+                    <!-- </div> -->
                 </div>                
                 <!-- <div class="tab-search">
                     <img src="Assets/images/search-icon.svg" alt="search-icon">
@@ -54,27 +56,40 @@
                 </div>
                 </div>
          </header>
-         <!-- <div id="wrapper">  -->
-         <section class="topbar grid">
+         
+         <section class="topbar">
+            <div class="grid filter-icon-tax-sec">
          <section class="icon-section">
             <ul class="icon-container">
-                <li><a><img src="Assets/images/views.jpg" alt="view">
-                <span>Amazing views</span></a></li>
-
                 <li><a><img src="Assets/images/Farms.jpg" alt="view">
-                <span>Farms</span></a></li>
-
-                <li><a><img src="Assets/images/Bed & breakfasts.jpg" alt="view">
-                <span>Beachfront</span></a></li>
+                    <span>Farms</span></a></li>
+                    <li><a><img src="Assets/images/Lakefront.jpg" alt="view">
+                        <span>Lakefront</span></a></li>
+                    <li><a><img src="Assets/images/Beachfront.jpg" alt="view">
+                        <span>Beachfront</span></a></li>
+                    <li><a><img src="Assets/images/containers.jpg.jpg" alt="view">
+                       
+                     <span>Containers</span></a></li>
+                     <li><a><img src="Assets/images/omgi.jpg" alt="view">
+                        <span>OMG!</span></a></li>
+                        
+                     <li><a><img src="Assets/images/views.jpg" alt="view">
+                <span>Amazing views</span></a></li>               
+                <li><a><img src="Assets/images/trending.jpg" alt="view">
+                    <span id="trending">Trending</span></a></li>
+                    <!-- <li><a><img src="Assets/images/caves.jpg" alt="view">
+                        <span>Caves</span></a></li> -->
+                <!-- <li><a><img src="Assets/images/Lakefront.jpg" alt="view">
+                <span>Lakefront</span></a></li> -->
 
                 <li><a><img src="Assets/images/castles.jpg" alt="view">
                 <span>Castles</span></a></li>
 
-                <li><a><img src="Assets/images/pool.jpg" alt="view">
-                <span>Amazing Pools</span></a></li>
+                <!-- <li><a><img src="Assets/images/pool.jpg" alt="view">
+                <span>Amazing Pools</span></a></li> -->
                 
                 <li><a><img src="Assets/images/top-of-world.jpg" alt="view">
-                <span>OMG!</span></a></li>
+                <span>Top-of-the-world</span></a></li>
                 
                 <li><a><img src="Assets/images/countryside.jpg" alt="view">
                 <span>Country side</span></a></li>
@@ -101,6 +116,8 @@
                 
                 <li><a><img src="Assets/images/trending.jpg" alt="view">
                 <span>Trending</span></a></li>
+                <li><a><img src="Assets/images/caves.jpg" alt="view">
+                    <span>Caves</span></a></li>
                 
                 <li><a><img src="Assets/images/luxe.jpg" alt="view">
                 <span>Luxe</span></a></li>
@@ -210,45 +227,58 @@
          <div id="right-sec">                 
          <section class="right-tax">
             <div id="taxes">
-            <!-- <div class="tax-div grid"> -->
             <p>Display total before taxes</p>
             <div class="btn-holder"><div class="btn"></div>
-            <!-- <div> -->
-                </div>
+            </div>
          </section> 
+         </div>
         </div>
     </section>
-    <section class="tax-div-mobile">
+    <div id="wrapper"> 
+        <section id="places">
+    <!-- <section class="tax-div-mobile">
         <div id="taxes">
-        <!-- <div class="tax-div grid"> -->
+
         <p>Display total before taxes</p>
         <div class="btn-holder"><div class="btn"></div>
-        <!-- <div> -->
+    
             </div>
-     </section> 
+     </section>  -->
 
-         <section id="places">
+          <div class="grid">
+            <section class="tax-div-mobile">
+            <div id="taxes">
+                <!-- <div class="tax-div grid"> -->
+                <p>Display total before taxes</p>
+                <div class="btn-holder"><div class="btn"></div>
+                <!-- <div> -->
+                    </div>
+                    </div>
+                </section>
 
-                <div class="grid">
                     <div class="img-blocks">
                     <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/Thrissur2.webp" alt="Thrissur">
+                        <img class="div-img" src="Assets/places/Thrissur2.webp" alt="Thrissur">
                     </div>
                     <div id="like-btn">
-                <img src="Assets/images/like-button.svg" alt="like-btn">
+                <img  src="Assets/images/like-button.svg" alt="like-btn">
                 </div>
                 <div class="carousal-btn">
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
-                    <input type="radio">
+                    <input type="radio"> <input type="radio">
                     </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
+                    </div>
+                    
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/Thrissur.webp" alt="Thrissur">
+                 <img class="div-img" src="Assets/places/Thrissur.webp" alt="Thrissur">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -258,27 +288,31 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
+                        <input type="radio">
+
+                        </div>
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
                         </div>                   
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <p>Thrissur, India</p>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                        <a href=""><p>Thrissur, India</p></a>
+                        <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;4.83</span> 
+                        </div>
+                      
+                        <a href=""><p class="place-det">499 kilometers away</p></a>
+                        <a href=""><p class="place-det">5-10 Oct</p></a>
+                     <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500 </span><span class="night">night</span></p></a>
                     </div>
-                  
-                    <p class="place-det">536 kilometers away</p>
-                    <p class="place-det">5-10 Oct</p>
-                 <p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>3,652</span>
-                    <span class="night">night</span></p>
-                </div>
                     </div>
                 <div class="img-blocks">
                 <div class="img-grid">  
                     <div class="image">
                         <div>
-                        <img src="Assets/places/Tarur.webp" alt="Tarur">
+                        <img  class="div-img"src="Assets/places/Tarur.webp" alt="Tarur">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -287,12 +321,16 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio"> 
                     <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/Tarur2.webp" alt="Tarur2">
+                 <img class="div-img" src="Assets/places/Tarur2.webp" alt="Tarur2">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -302,14 +340,18 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
-                 
+        
                 </div>
                 <div class="details">
                     <div class="place-rating">
                     <a href=""><p>Tarur, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
                     <a href=""><p class="place-det">499 kilometers away</p></a>
@@ -318,56 +360,171 @@
                 </div>
                  </div>
                  <div class="img-blocks">
-                <div class="img-grid"> 
-                    <div class="image">
-                        <div>
-                        <img src="Assets/places/colombo.webp" alt="Colombo">
-                    </div>
-                    <div id="like-btn">
-                <img src="Assets/images/like-button.svg" alt="like-btn">
-                </div>
-                <div class="carousal-btn">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    </div>
-                </div>
-                 <div class="image">
-                    <div>
-                 <img src="Assets/places/colombo2.jpeg" alt="Colombo">
-                 </div>
-                 <div id="like-btn">
+                    <div class="img-grid"> 
+                        <div class="image">
+                            <div>
+                            <img class="div-img" class="div-img" src="Assets/places/joncherey.webp" alt="Joncherey">
+                        </div>
+                        <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
-                    </div> 
+                    </div>
                     <div class="carousal-btn">
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
-                 </div>
-                 
-                </div>
-                <div class="details">
-                    <span class="place-rating">
-                    <a href=""><p>Colombo, Srilanka</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
-                    </span>
-                  
-                    <a href=""><p class="place-det">690 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-5 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>4,413</span>
-                    <span class="night">night</span>
-                </p></a>
-                </div>
-                 </div>
+                        <input type="radio">
+                        </div>
+                        <div class="rightside arrow-btn-on-img">
+                            <img src="Assets/images/right-arrow-thin.svg">
+                        </div>
+                    </div>
+                        <div class="image">
+                        <div>
+                        <img class="div-img"src="Assets/places/joncheray1.webp" alt="joncherey">
+                        </div>
+                        <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div> 
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div>  
+                            <div class="leftside arrow-btn-on-img">
+                                <img src="Assets/images/left-arrow-thin.svg">
+                            </div>                 
+                        </div>
+                        
+                    </div>
+                    <div class="details">
+                        <div class="place-rating">
+                        <a href=""><p>Joncherey, France</p></a>
+                        <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.46</span> 
+                        </div>
+                        
+                        <a href=""><p class="place-det">7,686 kilometers away</p></a>
+                        <a href=""><p class="place-det">29 Mar-3 Apr</p></a>
+                        <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>22,049</span>
+                        <span class="night">night</span></p></a>
+                    </div>
+                    
+                    </div>
+
+                    <div class="img-blocks">
+                        <div class="img-grid"> 
+                            <div class="image">
+                                <div>
+                                <img class="div-img" src="Assets/places/rhinebeck1.webp" alt="rhinebeck">
+                            </div>
+                            <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div>
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div>
+                            <div class="rightside arrow-btn-on-img">
+                                <img src="Assets/images/right-arrow-thin.svg">
+                            </div>
+                        </div>
+                         <div class="image">
+                            <div>
+                         <img class="div-img"src="Assets/places/rhinebeck.webp" alt="Rhinebeck">
+                         </div>
+                         <div id="like-btn">
+                            <img src="Assets/images/like-button.svg" alt="like-btn">
+                            </div> 
+                            <div class="carousal-btn">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                </div> 
+                                <div class="leftside arrow-btn-on-img">
+                                    <img src="Assets/images/left-arrow-thin.svg">
+                                </div>                  
+                         </div>
+                         
+                        </div>
+                        <div class="details">
+                            <div class="place-rating">
+                            <a href=""><p>Rhinebeck, Newyork, US</p></a>
+                            <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
+                            </div>
+                          
+                            <a href=""><p class="place-det">13,497 kilometers away</p></a>
+                            <a href=""><p class="place-det">11-16 Dec</p></a>
+                         <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>45,762</span>
+                            <span class="night">night</span></p></a>
+                        </div>
+                        
+                        </div>
+
+                 <div class="img-blocks">
+                    <div class="img-grid"> 
+                        <div class="image">
+                            <div>
+                            <img class="div-img" src="Assets/places/sagara.webp" alt="Sagara">
+                        </div>
+                        <div id="like-btn">
+                    <img src="Assets/images/like-button.svg" alt="like-btn">
+                    </div>
+                    <div class="carousal-btn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        </div>
+                        <div class="rightside arrow-btn-on-img">
+                            <img src="Assets/images/right-arrow-thin.svg">
+                        </div>
+                    </div>
+                     <div class="image">
+                        <div >
+                     <img class="div-img" src="Assets/places/sagara2.webp" alt="Sagara">
+                     </div>
+                     <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div> 
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div> 
+                            <div class="leftside arrow-btn-on-img">
+                                <img src="Assets/images/left-arrow-thin.svg">
+                            </div>                  
+                     </div>
+                     
+                    </div>
+                    <div class="details">
+                        <div class="place-rating">
+                        <a href=""><p>Sagara, India</p></a>
+                        <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
+                        </div>
+                      
+                        <a href=""><p class="place-det">580 kilometers away</p></a>
+                        <a href=""><p class="place-det">4-9 Oct</p></a>
+                     <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                        <span class="night">night</span></p></a>
+                    </div>
+                    </div>
 
                  <div class="img-blocks">
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/abiansemal.webp" alt="Abiansemal">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -377,11 +534,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                     <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/abiansemal2.webp" alt="Abiansemal">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -391,19 +552,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Abiansemal, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.85</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4,548 kilometers away</p></a>
+                    <a href=""><p class="place-det">6-11 Jan</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>41,507</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -411,7 +576,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/wadduva2.webp" alt="Wadduva">
+                        <img class="div-img" src="Assets/places/wadduva2.webp" alt="Wadduva">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -421,11 +586,14 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/Wadduva.webp" alt="Wadduva">
+                 <img class="div-img" src="Assets/places/Wadduva.webp" alt="Wadduva">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -435,14 +603,18 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
                     <a href=""><p>Wadduva, Sri Lanka</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.34</span> 
                     </div>
                   
                     <a href=""><p class="place-det">712 kilometers away</p></a>
@@ -455,7 +627,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/varkala.webp" alt="varkala">
+                        <img class="div-img" src="Assets/places/varkala.webp" alt="varkala">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -465,11 +637,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/varkala2.webp" alt="varkala">
+                 <img class="div-img" src="Assets/places/varkala2.webp" alt="varkala">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -479,6 +655,10 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
+                        <input type="radio">
+                        </div>
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
                         </div>                   
                  </div>
                  
@@ -486,7 +666,7 @@
                 <div class="details">
                     <span class="place-rating">
                     <a href=""><p>varkala, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.10</span> 
                     </span>
                   
                     <a href=""><p class="place-det"> 621 kilometers away</p></a>
@@ -499,7 +679,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/ernakulam.webp" alt="Ernakulam">
+                        <img class="div-img" src="Assets/places/ernakulam.webp" alt="Ernakulam">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -509,11 +689,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/Ernakulam2.webp" alt="Ernakulam">
+                 <img class="div-img" src="Assets/places/Ernakulam2.webp" alt="Ernakulam">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -523,18 +707,22 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
                     <a href=""><p>Ernakulam, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.3</span> 
                     </div>
                   
                     <a href=""><p class="place-det">569 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
+                    <a href=""><p class="place-det">4-11 Oct</p></a>
                  <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>14,500</span>
                     <span class="night">night</span></p></a>
                 </div>
@@ -543,8 +731,8 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
-                    </div>
+                            <img class="div-img" src="Assets/places/drimnin.webp" alt="Drimnin">
+                            </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
                 </div>
@@ -553,11 +741,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/drimnin2.webp" alt="Drimnin">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -567,19 +759,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Drimnin, UK</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">8,568 kilometers away</p></a>
+                    <a href=""><p class="place-det">27 Nov-2 Dect</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>19,695</span>
                     <span class="night">night</span></p></a>
                 </div>
                  </div>
@@ -587,7 +783,7 @@
                     <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/Murbad.webp" alt="Murbad">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -597,11 +793,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/Murbad1.webp" alt="Murbad">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -611,19 +811,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Murbad, India</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">1,007 kilometers away</p></a>
+                    <a href=""><p class="place-det">15-20 Oct</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>49,772</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -631,7 +835,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/selat.webp" alt="Sagara">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -641,11 +845,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/selat1.webp" alt="Sagara">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -655,19 +863,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Selat, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4,566 kilometers away</p></a>
+                    <a href=""><p class="place-det">8-13 Jan</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>28,180</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -675,7 +887,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img"src="Assets/places/ubud.webp" alt="Ubud">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -684,12 +896,16 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio"> 
                     <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/ubud1.webp" alt="Ubud">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -699,19 +915,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Ubud, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4,552 kilometers away</p></a>
+                    <a href=""><p class="place-det">18-23 Nov</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>60,679</span>
                     <span class="night">night</span></p></a>
                 </div>
                  </div>
@@ -719,7 +939,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/kuta.webp" alt="Kuta">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -729,11 +949,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/kuta1.webp" alt="Kuta">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -743,26 +967,30 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Kuta Utara, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4546 kilometers away</p></a>
+                    <a href=""><p class="place-det">15-20 Nov</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>18,204</span>
                     <span class="night">night</span></p></a>                </div>
                  </div>
                  <div class="img-blocks">
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img"src="Assets/places/tampaksiring.webp" alt="Tampaksiring">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -772,11 +1000,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/tampaksiring1.webp" alt="Tampaksiring">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -786,19 +1018,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                     </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Tampasksiring, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4,549 kilometers away</p></a>
+                    <a href=""><p class="place-det">7-12 Nov</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>36,407</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -807,7 +1043,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/kerambitan.webp" alt="Sagara">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -817,11 +1053,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/kerambitan1.webp" alt="Sagara">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -831,19 +1071,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><h6>Sagara, India</h6></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Kerambitan, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4539 kilometers away</p></a>
+                    <a href=""><p class="place-det">6-11 Jan</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>76,678</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -851,7 +1095,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/khao.webp" alt="Khao">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -860,12 +1104,16 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio"> 
                     <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/khao1.webp" alt="Sagara">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -875,19 +1123,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Khao Lak, Thailand</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">2019 kilometers away</p></a>
+                    <a href=""><p class="place-det">1-6 Nov</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>12,839</span>
                     <span class="night">night</span></p></a>
                 </div>
                  </div>
@@ -895,7 +1147,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img"src="Assets/places/muar.webp" alt="Muar">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -905,11 +1157,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                     <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/muar1.webp" alt="Muar">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -919,19 +1175,22 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Muar, Malaysia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">2742 kilometers away</p></a>
+                    <a href=""><p class="place-det">9-14 Oct</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>30,777</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -939,21 +1198,25 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img"src="Assets/places/balian.webp" alt="Balian">
                     </div>
                     <div id="like-btn">
-                <img src="Assets/images/like-button.svg" alt="like-btn">
+                <img class="div-img"src="Assets/images/like-button.svg" alt="like-btn">
                 </div>
                 <div class="carousal-btn">
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/balian1.webp" alt="Balian">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -963,19 +1226,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Balian Beach, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4520 kilometers away</p></a>
+                    <a href=""><p class="place-det">24-29 Oct</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>8,544</span>
                     <span class="night">night</span></p></a>
                 </div>
                  </div>
@@ -983,7 +1250,7 @@
                     <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img"src="Assets/places/amed.webp" alt="Amed">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -993,11 +1260,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                     <input type="radio"> 
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/amed1.webp" alt="Amed">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -1007,19 +1278,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Amed, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span lass="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">4,579 kilometers away</p></a>
+                    <a href=""><p class="place-det">1-6 Nov</p></a>
+                 <a href=""><p class="place-det"><span lass="amount"><i class="fa-solid fa-indian-rupee-sign"></i>9,416</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -1028,7 +1303,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/austin.webp" alt="Austin">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -1038,11 +1313,15 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                     <input type="radio"> 
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img"src="Assets/places/austin1.webp" alt="Austin">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -1052,19 +1331,23 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>   
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Austin,Texas, UK</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.2</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">15,185 kilometers away</p></a>
+                    <a href=""><p class="place-det">10-15 Oct</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>56,910</span>
                     <span class="night">night</span></p></a>
                 </div>
                 </div>
@@ -1072,7 +1355,7 @@
                 <div class="img-grid"> 
                     <div class="image">
                         <div>
-                        <img src="Assets/places/sagara.webp" alt="Sagara">
+                        <img class="div-img" src="Assets/places/redberth.webp" alt="Redberth">
                     </div>
                     <div id="like-btn">
                 <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -1082,11 +1365,14 @@
                     <input type="radio">
                     <input type="radio">
                     <input type="radio">
+                     <input type="radio">                     </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
                     </div>
                 </div>
                  <div class="image">
                     <div>
-                 <img src="Assets/places/sagara2.webp" alt="Sagara">
+                 <img class="div-img" src="Assets/places/redberth1.webp" alt="redberth">
                  </div>
                  <div id="like-btn">
                     <img src="Assets/images/like-button.svg" alt="like-btn">
@@ -1096,41 +1382,314 @@
                         <input type="radio">
                         <input type="radio">
                         <input type="radio">
-                        </div>                   
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
                  </div>
                  
                 </div>
                 <div class="details">
                     <div class="place-rating">
-                    <a href=""><p>Sagara, India</p></a>
-                    <span class="rating"><img src="Assets/images/star.svg" alt="star">4.2</span> 
+                    <a href=""><p>Redberth, UK</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
                     </div>
                   
-                    <a href=""><p class="place-det">580 kilometers away</p></a>
-                    <a href=""><p class="place-det">4-9 Oct</p></a>
-                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>6,500</span>
+                    <a href=""><p class="place-det">8,533 kilometers away</p></a>
+                    <a href=""><p class="place-det">11-16 Oct</p></a>
+                 <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>20,793</span>
                     <span class="night">night</span></p></a>
                 </div>
                 
                 </div>
+                
+                <div class="img-blocks">
+                    <div class="img-grid"> 
+                        <div class="image">
+                            <div>
+                            <img class="div-img" src="Assets/places/rhinebeck1.webp" alt="rhinebeck">
+                        </div>
+                        <div id="like-btn">
+                    <img src="Assets/images/like-button.svg" alt="like-btn">
+                    </div>
+                    <div class="carousal-btn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        </div>
+                        <div class="rightside arrow-btn-on-img">
+                            <img src="Assets/images/right-arrow-thin.svg">
+                        </div>
+                    </div>
+                     <div class="image">
+                        <div>
+                     <img class="div-img"src="Assets/places/rhinebeck.webp" alt="Rhinebeck">
+                     </div>
+                     <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div> 
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div> 
+                            <div class="leftside arrow-btn-on-img">
+                                <img src="Assets/images/left-arrow-thin.svg">
+                            </div>                  
+                     </div>
+                     
+                    </div>
+                    <div class="details">
+                        <div class="place-rating">
+                        <a href=""><p>Rhinebeck, Newyork, US</p></a>
+                        <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
+                        </div>
+                      
+                        <a href=""><p class="place-det">13,497 kilometers away</p></a>
+                        <a href=""><p class="place-det">11-16 Dec</p></a>
+                     <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>45,762</span>
+                        <span class="night">night</span></p></a>
+                    </div>
+                    
+                    </div>
+                    <div class="img-blocks">
+                        <div class="img-grid"> 
+                            <div class="image">
+                                <div>
+                                <img class="div-img"class="div-img" src="Assets/places/marton1.webp" alt="Marton">
+                            </div>
+                            <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div>
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div>
+                            <div class="rightside arrow-btn-on-img">
+                                <img src="Assets/images/right-arrow-thin.svg">
+                            </div>
+                        </div>
+                         <div class="image">
+                            <div>
+                         <img class="div-img" src="Assets/places/marton.webp" alt="Marton">
+                         </div>
+                         <div id="like-btn">
+                            <img src="Assets/images/like-button.svg" alt="like-btn">
+                            </div> 
+                            <div class="carousal-btn">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                <input type="radio">
+                                </div> 
+                                <div class="leftside arrow-btn-on-img">
+                                    <img src="Assets/images/left-arrow-thin.svg">
+                                </div>                  
+                         </div>
+                         
                 </div>
+                <div class="details">
+                    <div class="place-rating">
+                    <a href=""><p>Marton, New Zealand</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
+                    </div>
+                    
+                    <a href=""><p class="place-det">11,374 kilometers away</p></a>
+                    <a href=""><p class="place-det">11-16 Nov</p></a>
+                    <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>14,294</span>
+                    <span class="night">night</span></p></a>
+                </div>
+                
+                </div>
+                <div class="img-blocks">
+                    <div class="img-grid"> 
+                        <div class="image">
+                            <div>
+                            <img class="div-img" class="div-img" src="Assets/places/joncherey.webp" alt="Joncherey">
+                        </div>
+                        <div id="like-btn">
+                    <img src="Assets/images/like-button.svg" alt="like-btn">
+                    </div>
+                    <div class="carousal-btn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        </div>
+                        <div class="rightside arrow-btn-on-img">
+                            <img src="Assets/images/right-arrow-thin.svg">
+                        </div>
+                    </div>
+                        <div class="image">
+                        <div>
+                        <img class="div-img"src="Assets/places/joncheray1.webp" alt="joncherey">
+                        </div>
+                        <div id="like-btn">
+                        <img src="Assets/images/like-button.svg" alt="like-btn">
+                        </div> 
+                        <div class="carousal-btn">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            </div>  
+                            <div class="leftside arrow-btn-on-img">
+                                <img src="Assets/images/left-arrow-thin.svg">
+                            </div>                 
+                        </div>
+                        
+                    </div>
+                    <div class="details">
+                        <div class="place-rating">
+                        <a href=""><p>Joncherey, France</p></a>
+                        <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.46</span> 
+                        </div>
+                        
+                        <a href=""><p class="place-det">7,686 kilometers away</p></a>
+                        <a href=""><p class="place-det">29 Mar-3 Apr</p></a>
+                        <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>22,049</span>
+                        <span class="night">night</span></p></a>
+                    </div>
+                    
+                    </div>
+            <div class="img-blocks">
+                <div class="img-grid"> 
+                    <div class="image">
+                        <div>
+                        <img class="div-img" src="Assets/places/joshua.webp" alt="Joshua">
+                    </div>
+                    <div id="like-btn">
+                <img src="Assets/images/like-button.svg" alt="like-btn">
+                </div>
+                <div class="carousal-btn">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                     <input type="radio">
+
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
+                    </div>
+                </div>
+                    <div class="image">
+                    <div>
+                    <img class="div-img"src="Assets/places/joshua1.webp" alt="joshua">
+                    </div>
+                    <div id="like-btn">
+                    <img src="Assets/images/like-button.svg" alt="like-btn">
+                    </div> 
+                    <div class="carousal-btn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        </div> 
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                  
+                    </div>
+                    
+                </div>
+                <div class="details">
+                    <div class="place-rating">
+                    <a href=""><p>Joshua Tree, California, US</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.4</span> 
+                    </div>
+                    
+                    <a href=""><p class="place-det">14,484 kilometers away</p></a>
+                    <a href=""><p class="place-det">9-14 Oct</p></a>
+                    <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>5,40,667</span>
+                    <span class="night">night</span></p></a>
+                </div>
+                
+                </div>
+            <div class="img-blocks">
+                <div class="img-grid"> 
+                    <div class="image">
+                        <div>
+                        <img class="div-img" src="Assets/places/pujon.webp" alt="pujon">
+                    </div>
+                    <div id="like-btn">
+                <img src="Assets/images/like-button.svg" alt="like-btn">
+                </div>
+                <div class="carousal-btn">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio"> 
+                    <input type="radio">
+                    </div>
+                    <div class="rightside arrow-btn-on-img">
+                        <img src="Assets/images/right-arrow-thin.svg">
+                    </div>
+                </div>
+                    <div class="image">
+                    <div>
+                    <img class="div-img"src="Assets/places/pujon1.webp" alt="pujon">
+                    </div>
+                    <div id="like-btn">
+                    <img src="Assets/images/like-button.svg" alt="like-btn">
+                    </div> 
+                    <div class="carousal-btn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        </div>  
+                        <div class="leftside arrow-btn-on-img">
+                            <img src="Assets/images/left-arrow-thin.svg">
+                        </div>                 
+                    </div>
+                    
+                </div>
+                <div class="details">
+                    <div class="place-rating">
+                    <a href=""><p>Pujon, Indonesia</p></a>
+                    <span class="rating"><img src="Assets/images/star.svg" alt="star">&nbsp;&nbsp;4.7</span> 
+                    </div>
+                    
+                    <a href=""><p class="place-det">4,252 kilometers away</p></a>
+                    <a href=""><p class="place-det">7-12 Oct</p></a>
+                    <a href=""><p class="place-det"><span class="amount"><i class="fa-solid fa-indian-rupee-sign"></i>2,124</span>
+                    <span class="night">night</span></p></a>
+                </div>
+                
+                </div>
+                                                            
+
+    </div>
                              
          </section>
          <section class="grid explore">
           <div id="explore-sec">
-            <h3>Continue exploring farms</h3>
+            <p>Continue exploring farms</p>
             <button>Show more</button>
           </div>
          </section>
         </div>
          <footer >
             <div class="footer-sec">
-                <h2>Inspiration for future getaways</h2>
-                <div style="position: relative;">
+                <p class="heading">Inspiration for future getaways</p>
+                <div style="position: relative;padding-left:24px;padding-right:24px">
 <div class="icon-section">
     <ul class="icon-container">
         <li><a class="menu" href="">Popular</a></li>
-        <li><a class="menu" href="">Arts & Culture</a></li>
+        <li><a class="menu" href="">Arts & culture</a></li>
         <li><a class="menu" href="">Outdoors</a></li>
         <li><a class="menu" href="">Mountains</a></li>
         <li><a class="menu" href="">Beach</a></li>
@@ -1217,7 +1776,7 @@
         <p>Showmore <i class="fa-solid fa-angle-down"></i></p>       
     </div>
 </div>
-
+<div class="foot-det-container">
 <div class="foot-grid">
     <div class="footer-details">        
     <p>Support</p>
@@ -1246,10 +1805,11 @@
     <p>Investors</p>
     <p>Airbnb.org emergency stays</p> 
     </div> 
-    </div>
+    
+
     <div class="footer-details link-div">  
-        <p class="largescreen-footer"><i class="fa-regular fa-copyright"></i>&nbsp;2023 Airbnb, Inc.&nbsp;&nbsp;
-        Privacy<span>.</span>Terms<span>.</span>Sitemap<span>.</span>Company details</p>
+        <div class="largescreen-footer"><i class="fa-regular fa-copyright"></i>&nbsp;2023 Airbnb, Inc.&nbsp;&nbsp;
+        Privacy<span>.</span>Terms<span>.</span>Sitemap<span>.</span>Company details</div>
            
       <p class="language">  <img src="Assets/images/glob.svg" alt="locate">English(IN)<i class="fa-solid fa-indian-rupee-sign"></i>INR &nbsp; &nbsp; &nbsp; &nbsp;
       <a href=""><img src="Assets/images/fb-logo.svg" alt="facebook"></a>
@@ -1262,10 +1822,16 @@
     
     </div>
 </div>
-</div>      
-     <div class="map">
-        <span>Map</span><img src="Assets/images/flag.svg" alt="map">
-    </div>          
+</div>
+</div>
+    
+     <div class="map-det map">
+        <span> map</span><img src="Assets/images/flag.svg" alt="map">
+    </div>  
+    <div class="map map-large-device">
+        <span> show map</span><img src="Assets/images/flag.svg" alt="map">
+    </div>
+        
  </footer>
 
 <div class="icons-bottom">
@@ -1277,12 +1843,12 @@
 
             <div>
                 <img src="Assets/images/wishlist.svg" alt="wishlist-icon"><br/>
-                <span>Wishlist</span>
+                <span>Wishlists</span>
             </div>
     
             <div>
                 <img src="Assets/images/user-scroll.svg" alt="user-icon"><br/>
-                <span>Login</span>
+                <span>Log in</span>
             </div>
     </div>
 </div>
