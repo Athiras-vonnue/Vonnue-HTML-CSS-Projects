@@ -388,18 +388,19 @@ li a{
      width:100%; 
      height:100% ;
     }
+    .image div{
+        /* position:relative */
+    }
     .image div:nth-child(1){
         width:100%;
         height:100%;
-        position: absolute;
+        /* position: absolute; */
     }
     .div-img{
         width:100%;
         height:100%
     }
-    .image div{
-        position:relative
-    }
+   
    .carousal-btn{
     position:absolute;
     bottom:7px;
