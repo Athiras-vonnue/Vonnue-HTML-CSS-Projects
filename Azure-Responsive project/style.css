@@ -8,7 +8,7 @@
     src: url(Fonts/latest.woff2);
 }
 @font-face {
-    font-family: "font-icon";
+    font-family: "font-iccon";
     src: url(Fonts/MWFFluentIcons.woff2);
 }
 body{
@@ -19,25 +19,39 @@ body{
     font-size: 14px;
     line-height: 1.5rem;
     letter-spacing: -0.03em;
+    background-color: #f7f7f7;
+    color:#17253d;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
 }
 header{
     display:flex;
     justify-content: space-between;
-    padding:20px 25px;
+    padding: 12px 24px;
+    /* padding:11px 25px 12px 24px; */
     align-items: center;
+    background: #fff;
+    box-sizing: border-box;
+    color: #1a1a1f;
+    font-size: 15px;
+    box-sizing: border-box;
+    height:78px
 }
 .hamburger img{
     font-family: 'font-icon';
-    width:20px;
-    height:20px;
+    font-weight: 400;
+    width:20px; 
+    height:19px;
     line-height: 1px;
-    margin-right:16px;
+    /* margin-right:16px;  */
 }
 .hamburger{
     padding-top: 7px;
-}
-.Application{
-    /* padding-bottom: 0px; */
+    margin-right: 15.5px;
 }
 .logo-text{
     font-size: 18px;
@@ -47,15 +61,269 @@ header{
 .header-left{
     display: flex;
     align-items: center;
+    /* min-width: 130px; */
+}
+.application{
+    margin-left: 19px;
 }
 .header-right{
     display:flex;
     align-items: center;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1a1f;
+}
+.header-right i{
+    /* font-weight: 400 !important; */
+    /* font-family: 'icon-font'; */
 }
 .sign-in{
     font-family: 'latest1';
-    margin-left: 30px;
+    margin-left: 35px;
     font-size: 14px;
     font-weight: 400;
-    padding-right: 6px;
+    /* padding-right: 6px; */
 }
+.landing-sec{
+    display: flex;
+    flex-direction: column;
+}
+.landing-text{
+    padding-left: 4px;
+    padding-top: 20px;
+    padding-right: 12px;
+}
+.news-sec img{
+width:15px;
+height:15px
+}
+.landing-img{
+    height:23.6vh;
+    width:100%;
+    position:relative;
+    margin: 0;
+    padding: 0;
+    
+}
+.landing-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    margin:0
+}       
+.container{
+    padding: 0;
+    /* background:  #0078d4; */
+    background: linear-gradient(90deg, #ede8f6 0%, #f4fafd 49.99%, #dceef8 100%);
+} 
+.container h1{
+font-weight:600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing:-.05em;
+    margin-bottom: 0;
+    margin: 0.75rem
+
+}    
+.blockheading-para   {
+    color:#17253d;
+    margin: 0.75rem                                                                        
+}                        
+.heading-para{
+    font-family: 'latest1';
+    font-weight:400;
+    line-height: 1.75rem;
+    letter-spacing: -.03em;
+    margin-bottom: 0;
+    font-size:1.125rem;
+
+}
+.block-heading{
+    font-weight: 600;
+    font-size:1.75rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.05em;
+    font-family: 'latest';
+    color:#17253d
+    /* color:#0e1726 */
+}
+.btn-text{
+padding-bottom: 0.125rem;
+display: block;
+text-align: center;
+font-family: 'latest';
+/* font-size: 1em; */
+}
+.btn{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    border:2px solid transparent; 
+    /* padding: calc( 0.75rem - 2px) calc( 1rem - 2px); */
+    padding: .625rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.375rem;
+    letter-spacing: -.02em;
+    background: #0078d4;
+    font-weight: 600;
+    color:#fff;
+    border-radius: 0.5rem;
+
+}
+.btn-sec{
+    margin-top: 22px;
+    margin: 24px 4px 6rem 0.75rem
+}
+.btn-sec button:nth-child(2){
+    margin-top: 8px;
+    border:2px solid #2a446f;
+    color:#2a446f;
+    background: transparent;
+}
+.news-sec{
+    background: #ffff;
+  color:#2a446f;
+ display: flex;   
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 20px 24px 20px;
+ font-weight: 600;
+ font-size: 0.75rem;
+ line-height: 1rem;
+box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12),0 0.25rem 0.5rem rgba(0, 0, 0, 0.14);
+}
+.news-sec img{
+    width:12.5px;
+    height:13px;
+    font-family: 'icon-font';
+    /* font-size: 15px; */
+}   
+.featured-news-sec{
+    /* background: url('Assets/bg-image.avif');
+    background-repeat: no-repeat;
+    background-size: contain; */
+    background: #E2E8F4
+    ;
+    }                                                                                                     
+.img-grid img{
+    width:100%;
+    height:100%
+}
+.feature-sec,.solutions-sec{
+    padding: 57px 17px;
+}
+.reg-btn{
+    display: flex;
+    margin-top: 2rem;
+}
+.arrow-btn{
+   /* width:40px; */
+   /* height:40px; */
+   padding: calc( 0.5rem - 2px);
+   color:#f7f7f7;
+   font-weight: 400;
+   background: #0078d4;
+   border-radius: 0.5rem;
+   width:15px;
+   height:15px;
+   border:2px solid transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* padding-left: 3px; */
+   margin-right: 10px;
+}
+.arrow-btn i{
+    /* padding-left: 5px;
+    padding-top: 2px; */
+}
+.heading-small{
+    font-weight: 600;
+    font-size:0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.08em;
+    color: #263e65;
+    text-transform: uppercase;
+    margin:0 0 0.75rem
+    
+}
+.cards{
+    margin-top: 2rem;
+    background: #fefefe;
+    border-radius: 18px;
+    box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12),0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
+}
+.cards .img-grid{
+    padding: 0.5rem;
+    /* border-radius: 50% */
+}
+.img-grid img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 9px
+}
+.title h5{
+    font-weight: 600;
+    font-size:1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.03em;
+    margin-block-start: 0px;
+    margin-block-end: 13px
+}
+.details{
+    padding: 0px 14px 14px 14px;
+}
+.card-heading-para{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height:1.5rem;
+    letter-spacing: -.03em;
+    margin-bottom: 0;
+}
+  .link{
+    color:#2a446f;
+    font-weight: 600;
+    font-size: .9375rem;
+    line-height: 1.375rem;
+    letter-spacing: -.02em;
+  }                                  
+           
+.block-heading-soln{
+    font-weight:600;
+    font-size: 1.5rem;
+    line-height:2rem;
+    letter-spacing:-.05em;
+    margin-bottom: 0;
+}
+.tabs-solution ul{
+    display:flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+li{
+    list-style-type: none;
+}
+.tabs-solution ul li{
+    background: #e6f2fb;
+    color:#2a446f;
+    padding: 0.5rem 1rem;
+    border-radius: 12.5rem;
+    flex:0 0 auto;
+    margin-right: 0.5rem;
+
+}
+
+
+
+
+
+
+
+
