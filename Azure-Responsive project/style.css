@@ -59,10 +59,16 @@ header {
 .header-left {
   display: flex;
   align-items: center;
+  float: left;
 }
 .application {
   margin-left: 19px;
 }
+.application1,
+.icon-size {
+  display: none;
+}
+
 .header-right {
   display: flex;
   align-items: center;
@@ -71,10 +77,10 @@ header {
   font-weight: 400;
   color: #1a1a1f;
 }
-.header-right span {
+.header-right .search-icon {
   padding-top: 7px;
 }
-.header-right span::after {
+.header-right .search-icon::after {
   content: "";
   font-family: "font-icon";
   font-size: 18px;
@@ -116,6 +122,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* padding-bottom: 1px; */
 }
 .container {
   margin-top: -8px;
@@ -1021,4 +1028,224 @@ select {
   line-height: 1;
   margin-top: 4px;
   margin-right: 7px;
+}
+/* Tablets*/
+.dots {
+  display: none;
+}
+.icon-size {
+  /* display: inline-flex; */
+  width: 24px;
+  height: 24px;
+}
+.icon-size img {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  display: none;
+}
+header button {
+  width: initial;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+}
+.nav-btn::after {
+  transition: transform 0.25s 0s;
+  content: "\e70d";
+  font-family: "font-icon";
+  font-size: 8px;
+  margin: 3px 0 0 4px;
+  font-weight: 600;
+  float: right;
+  padding-top: 0px;
+}
+nav ul {
+  display: inline-flex;
+  padding-inline-start: 0px;
+  /*  */
+  /* color: rgb(26, 26, 31); */
+}
+.nav-item {
+  margin-left: 14px;
+  padding-bottom: 1px;
+}
+.nav-btn {
+  padding-right: 10px;
+  letter-spacing: normal;
+  line-height: 13px;
+}
+/******************************************************/
+/*For laptop-1024px*/
+
+/******************************************************/
+/*For Laptop Large*/
+.search-bar {
+  width: 120px;
+  margin-right: 20px;
+  display: none;
+  position: relative;
+}
+.search-bar input {
+  border: 1px solid #747479;
+  box-sizing: border-box;
+  font-family: latest1;
+  font-size: 13px;
+  /* text-align: center; */
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 20px;
+  background: #f8f9fa;
+  min-height: 32px;
+  line-height: 1.2;
+  /* padding-top: 3px; */
+  border-radius: 4px;
+}
+.search-bar button {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  right: 9px;
+  box-sizing: border-box;
+}
+.search-bar button::after {
+  content: "\e721";
+  font-size: 14px;
+  font-family: "font-icon";
+  color: #1a1a1f;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+.utility {
+  font-family: latest1;
+  display: none;
+  color: #2e2e33;
+  /* padding-left: 5px; */
+}
+.account-btn {
+  background: #89c402;
+  border: 1px solid #6f9e02;
+  border-radius: 4px;
+  color: #2e2e33;
+  display: inline-block;
+  font-size: 12px !important;
+  font-weight: 600;
+  padding: 9px 7px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: normal;
+  margin: 0 0px 0 6px;
+  font-family: latest;
+}
+
+/*-------------------------------------------------------*/
+
+/*Tablets*/
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .application {
+    display: none;
+  }
+  .icon-size {
+    display: inline-flex;
+  }
+  .application1 {
+    display: block;
+  }
+  .dots {
+    display: inline-block;
+    padding-bottom: 0px;
+    margin-left: 19px;
+  }
+  nav {
+    display: block;
+    margin-right: auto;
+  }
+  header {
+    display: flex;
+    padding: 0 8px 0 12px;
+    height: 55px;
+  }
+  .logo-text {
+    margin-left: 12px;
+    padding-bottom: 2px;
+  }
+  .header-right {
+    margin-right: 0px;
+  }
+  .sign-in {
+    /* letter-spacing: -0.9px; */
+    margin-left: 0px;
+    margin-left: 12px;
+    font-size: 13px;
+  }
+  .header-right .search-icon::after {
+    font-size: 14px;
+  }
+  .header-right .search-icon {
+    padding-top: 0;
+  }
+  /*nav {
+    /* margin-left: -84px; 
+    letter-spacing: -0.48px;
+    font-family: inherit;
+    line-height: inherit;
+    font-size: 12px;
+  }*/
+  .nav-btn {
+    font-size: 13px;
+    font-family: latest1;
+    /* line-height: 13px; */
+  }
+}
+/*------------------------------------------------------*/
+/*For laptops*/
+@media screen and (min-width: 1024px) {
+}
+/*-----------------------------------------------------*/
+/*Laptop L*/
+@media screen and (min-width: 1440px) {
+  .dots,
+  .search-icon {
+    display: none;
+  }
+  header {
+    height: 54px;
+  }
+  .header-left {
+    padding-top: 2px;
+  }
+  .header-right {
+    margin-left: 10px;
+  }
+  .utility {
+    display: block;
+  }
+  .search-bar {
+    display: block;
+  }
+  .nav-btn1 {
+    font-size: 13px;
+    font-family: latest1;
+    color: #2e2e33;
+    letter-spacing: normal;
+    /* margin-right: 10px; */
+  }
+  .logo-text {
+    margin-left: 24px;
+  }
+  .nav-item {
+    margin-left: 25px;
+    padding-bottom: 3px;
+  }
+  .sign-in {
+    margin-left: 14px;
+  }
+  /* .nav-item li + li { */
+  /* padding-left: 1px; */
 }
