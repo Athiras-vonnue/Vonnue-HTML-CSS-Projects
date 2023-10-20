@@ -8,15 +8,17 @@
     </head>
     <body>
    <header>
+    <div class="header">
+
     <div class="header-left">
        <span class="icon-size"><img class="application1" src="Assets/App.svg" alt="Application"></span> 
     <div class="hamburger"><img src="Assets/menu-icon.svg" alt="menu-icon"></div>
     <div class="logo-text">Azure</div>
-    </div>
+    
     <!-- <div class="Application"><img src="Assets/App.svg" alt="Application"></div> -->
    
-    <img class="application" src="Assets/App.svg" alt="Application">
-    <nav>
+    <!-- <img class="application" src="Assets/App.svg" alt="Application"> -->
+    <nav  class="navbar">
         <ul class="nav-item">
             <li><button class="nav-btn">Explore</button>                
             </li>
@@ -29,30 +31,35 @@
             <li><button class="nav-btn">Partners</button>                
             </li>
             <li><button class="nav-btn">Resources</button>                
-            </li>
+            </li>   
         </ul>
     </nav>
-    <div class="header-right">
-        <span class="search-icon"></span>
-    <!-- <div><i class="fa-thin fa fa-magnifying-glass"></i></div> -->
-   <button class="dots">
+    </div>
+   <div class="search-div">
+    <img class="application" src="Assets/App.svg" alt="Application">
+    <button class="search-icon"></button>
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button></button>    
+    </div>
+   </div>
+
+    <div class="header-right"> 
+        <button class="search-icon1"></button>       
+    <button class="dots">
     <span class="icon-size"><img src="Assets/dots.svg" alt="dots"></span>
-   </button>
-   <div class="search-bar">
-    <input type="text" placeholder="Search">
-    <button></button>    
-</div>
-<nav class="utility">
-<ul>
-    <li>
-        <button class="nav-btn1">Learn</button>
-    </li>
-    <li><button class="nav-btn1">Support</button></li>
-    <li><button class="nav-btn1">Contact Sales</button></li>
-    <li><button class="account-btn nav-btn1">Free account</button></li>
+    </button>
+  <nav class="utility">
+<ul class="utility-item">
+    <li><a class="nav-btn1">Learn</a></li>
+    <li><a class="nav-btn1">Support</a></li>
+    <li><a class="nav-btn1">Contact Sales</a></li>
+    <li><a class="account-btn nav-btn1">Free account</a></li>
+    <li><a class="nav-btn1 sign">Sign In</a></li>
 </ul>
 </nav>
     <div class="sign-in">Sign In</div>
+    </div>
     </div>
    </header>
    <main>
