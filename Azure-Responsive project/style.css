@@ -942,13 +942,14 @@ sup {
 }
 
 a {
-  color: #fff;
+  /* color: #fff; */
 }
 
 .cloud-card {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  color: #DCEEF8
 }
 
 .stories {
@@ -2657,7 +2658,7 @@ nav {
     font-size: 32px;
   }
 
-  .heading-small {
+  .solutions-sec .heading-small {
     margin-bottom: 20px;
   }
 
@@ -2812,7 +2813,7 @@ nav {
     font-size: 40px;
   }
 
-  .heading-small {
+  .resource-top-sec .heading-small {
     margin-bottom: 22px;
   }
 
@@ -2848,10 +2849,10 @@ nav {
     width: 195px
   }
 
-  .resources-item .title h5 {
+  /*.resources-item .title h5 {
     font-size: 1rem;
     letter-spacing: -0.06em;
-  }
+  }*/
 
   .resources-item .title h5 {
     margin-block-start: 13px;
@@ -2891,8 +2892,31 @@ nav {
 
   .cloud-container {
     margin-top: 2.4rem;
+    border-radius: 1.5rem;
   }
 
+  .values {
+    padding-left: 4.5rem;
+    padding-right: 80px;
+  }
+
+  .cloud-card img {
+    width: 21.3438px;
+    height: 27.0938px;
+    margin-top: 0px;
+  }
+
+  .cloud-card {
+    flex-direction: row;
+    font-size: 17px;
+  }
+
+  .cloud-card .card-heading-para {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #fff;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 2560px) {
