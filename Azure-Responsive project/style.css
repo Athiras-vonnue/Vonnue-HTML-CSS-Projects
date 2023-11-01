@@ -38,13 +38,17 @@ h1 {
   margin-block-end: 0.83em;
 }
 
+header {
+  background: #fff;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 12px 24px;
   /* padding:11px 25px 12px 24px; */
   align-items: center;
-  background: #fff;
+  /* background: #fff; */
   box-sizing: border-box;
   color: #1a1a1f;
   font-size: 15px;
@@ -118,6 +122,15 @@ h1 {
   padding-left: 4px;
   padding-top: 20px;
   padding-right: 12px;
+  max-width: 656px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.container {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .news-sec img {
@@ -3013,6 +3026,9 @@ nav {
 
   .header {
     height: 54px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .search-bar {
@@ -3107,6 +3123,15 @@ nav {
   .laptop-menu {
     padding-left: 36px;
     padding-right: 72px;
+    max-width: 1364px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-sec {
+    max-width: 1328px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .chat-btn .btn {
@@ -3176,6 +3201,14 @@ nav {
   .solutions-sec {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
+    /* padding-left: 1px; */
+  }
+
+  .soln-container {
+    max-width: 1328px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 3px; */
   }
 
   .block-heading-soln {
@@ -3201,7 +3234,7 @@ nav {
 
   .soln-laptop {
     margin-top: 30px;
-    margin-right: 8px;
+    margin-right: 5px;
   }
 
   .detail-view {
@@ -3233,19 +3266,36 @@ nav {
     padding-top: 7px;
   }
 
+  .img-sec {
+    padding-top: 2px;
+
+  }
+
   .item-image-lap {
-    width: 644px;
-    height: 483px;
+    /* width: 640px; */
+    /* height: 483px; */
+    width: 73.8%;
+    height: 82%;
+    max-width: 656px;
+    max-height: 528px;
   }
 
   .item-image-lap img {
     border-radius: 1.5rem;
+    width: 100%;
+    height: 100%
   }
 
   .products-sec {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
     padding-top: 95px;
+  }
+
+  .prouct-sec-cont {
+    max-width: 1330px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pro-container {
@@ -3404,8 +3454,8 @@ nav {
 
   .resources-item .title h5 {
     margin-block-start: 13px;
-    font-size: 16px;
-    letter-spacing: -0.95px;
+    font-size: 20px;
+    /* letter-spacing: -0.95px; */
   }
 
   .resources-item .reg-btn {
@@ -3417,12 +3467,12 @@ nav {
   }
 
   .pro-container .link-AI {
-    margin-top: 128px;
-    margin-bottom: 24px;
+    margin-top: 80px;
+    /* margin-bottom: 24px; */
   }
 
   .second-row {
-    margin-top: 104px !important
+    margin-top: 70px !important
   }
 
   .global-container div:nth-child(3) {
@@ -3430,9 +3480,17 @@ nav {
   }
 
   .media {
-    margin-left: 14rem;
-    margin-right: 14rem;
+    /* max-width: 1328px; */
+    width: 835px;
+    margin: auto;
+    /* height: 507.859px; */
+    height: 470px;
+    /* margin-left: 14rem;
+    margin-right: 14rem; */
     border-radius: 1.5rem;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    /* padding: 1rem; */
   }
 
   .media img {
@@ -3458,12 +3516,18 @@ nav {
   }
 
   .cloud-container {
-    margin-top: 2.3rem;
+    /* margin-top: 2.3rem;
     border-radius: 1.5rem;
     padding-top: 4.131rem;
     padding-left: 73px;
     padding-right: 73px;
-    padding-bottom: 4.5rem;
+    padding-bottom: 4.5rem; */
+    max-width: 1178px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.35rem;
+    padding-top: 4rem;
+    padding-bottom: 4.4rem;
   }
 
   .cloud2 {
@@ -3507,6 +3571,15 @@ nav {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 71px;
+    /* max-width: 1328px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+  }
+
+  .story-container {
+    max-width: 1328px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .stories .heading-small {
@@ -3598,17 +3671,27 @@ nav {
   }
 
   .next-step .regbtn3 {
-    padding-top: 43px;
+    padding-top: 73px;
   }
 
   .azure-footer-nav-col ul li:nth-child(1) {
     margin-top: -1px;
   }
 
+  .azure-nav .heading {
+    padding-bottom: 2px;
+  }
+
   .link-sec {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
     padding-top: 7.3rem;
+  }
+
+  .links {
+    max-width: 1328px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-btm {
@@ -3634,6 +3717,18 @@ nav {
   select {
     padding: 5px
   }
+
+  .footer-content {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1460px) {
+  .privacy {
+    margin-top: 29px;
+  }
 }
 
 @media screen and (min-width: 2560px) {
@@ -3642,12 +3737,17 @@ nav {
   }
 
   .header {
-    padding: 0px 480px;
+    /* padding: 0px 480px; */
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .container {
-    max-width: 1360px;
-    padding: 0px 600px;
+    /* max-width: 1366px; */
+    padding-top: 0;
+    padding-bottom: 0;
+    /* padding: 0px 600px; */
   }
 
   .landing-text {
@@ -3681,8 +3781,8 @@ nav {
   }
 
   .content-sec {
-    margin-left: 488px;
-    margin-right: 488px;
+    /* margin-left: 488px;
+    margin-right: 488px; */
   }
 
   .content-sec .heading-small,
@@ -3722,8 +3822,8 @@ nav {
   }
 
   .solutions-sec {
-    padding-left: 616px;
-    padding-right: 616px;
+    /* padding-left: 616px; */
+    /* padding-right: 616px; */
   }
 
   .first-soln {
@@ -3777,8 +3877,8 @@ nav {
   }
 
   .products-sec {
-    padding-left: 616px;
-    padding-right: 616px;
+    /* padding-left: 616px; */
+    /* padding-right: 616px; */
   }
 
   .products-sec .heading-small {
@@ -3791,7 +3891,7 @@ nav {
   }
 
   .pro-container .link-AI {
-    margin-top: 106px;
+    margin-top: 70px;
     margin-bottom: 25px;
   }
 
@@ -3823,9 +3923,9 @@ nav {
   }
 
   .media {
-    width: 34.38%;
+    /* width: 34.38%; */
     margin: auto;
-    height: 469.859px;
+    /* height: 469.859px; */
     margin-top: 2rem;
     padding-bottom: 1.5rem;
   }
@@ -3843,7 +3943,8 @@ nav {
   }
 
   .cloud-container {
-    width: 48.75%;
+    /* width: 48.75%; */
+    max-width: 1178px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2.35rem;
@@ -3864,14 +3965,14 @@ nav {
   }
 
   .carousal {
-    width: 57.4%;
+    /* width: 57.4%; */
     margin-left: auto;
     margin-right: auto;
     /* margin-right: 2px; */
   }
 
   .testimonial-card h4 {
-    padding-right: 4rem;
+    /* padding-right: 4rem; */
   }
 
   .testimonial-card .testmonial-link {
@@ -3885,7 +3986,7 @@ nav {
     border-radius: 1.5rem;
   }
 
-  .stories .block-heading-soln,
+  /* .stories .block-heading-soln,
   .stories .heading-small,
   .stories .reg-btn,
   .next-step .products-container,
@@ -3894,15 +3995,13 @@ nav {
     margin-left: auto;
     margin-right: auto;
     /* padding-right: 16px; */
-  }
+
 
   .next-step {
     padding-bottom: 6.05rem
   }
 
-  .next-step .card-heading-para {
-    /* margin-top: -px; */
-  }
+
 
   .next-step .reg-btn {
     margin-left: 0;
@@ -3922,11 +4021,11 @@ nav {
   }
 
   .stories .grid {
-    column-gap: 0.5rem;
+    /* column-gap: 0.5rem; */
   }
 
   .links {
-    padding-left: 65px;
+    /* padding-left: 65px; */
   }
 
   .footer-content {
