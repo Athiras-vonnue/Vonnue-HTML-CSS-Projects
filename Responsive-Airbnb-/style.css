@@ -1808,6 +1808,28 @@ footer .icon-container li:first-child {
         height: 295px;
     }
 
+    #header-items {
+        max-width: 2520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .topbar {
+        max-width: 2574px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #wrapper {
+        max-width: 2560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid {
+        padding: 16px 100px 20px 100px;
+    }
+
     .items>a {
         padding-top: 2px
     }
@@ -1849,7 +1871,9 @@ footer .icon-container li:first-child {
     }
 
     .right-arrow {
-        right: 23.7%
+        /* right: 23.7% */
+        right: 457px;
+        top: 106px
     }
 
     .locateus p:first-child {
@@ -1867,6 +1891,22 @@ footer .icon-container li:first-child {
     .foot-grid {
         font-size: 12px;
         grid-gap: 5px
+    }
+
+    .filter-sec {
+        padding-left: 3px;
+        padding-right: 16px;
+    }
+
+    .footer-sec {
+        /* padding: 30px 476px 1px 476px; */
+        max-width: 1587px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .map-large-device {
+        display: none;
     }
 }
 
@@ -1892,11 +1932,11 @@ footer .icon-container li:first-child {
     }
 
     .grid {
-        padding: 20px 100px 20px 100px
+        padding: 16px 100px 20px 100px
     }
 
     #header-items {
-        padding: 16px 100px;
+        /* padding: 16px 100px; */
 
     }
 
@@ -1909,14 +1949,13 @@ footer .icon-container li:first-child {
         grid-column: span 3;
     }
 
-    .filter-sec {
-        padding-left: 10px;
+    /* padding-left: 10px;
         padding-right: 10px;
-    }
+    } */
 
     #right-sec {
-        padding-left: 9px;
-        padding-right: 0px;
+        /* padding-left: 9px;
+        padding-right: 0px; */
         /* margin-left: -3px; */
     }
 
@@ -1930,14 +1969,14 @@ footer .icon-container li:first-child {
     }
 
     .right-arrow {
-        right: 17.55%
+        /* right: 17.55% */
     }
 
     .topbar .icon-section {
         margin-right: 55px;
     }
 
-    footer {
+    /* footer {
         padding: 30px 476px 1px 476px
-    }
+    } */
 }
