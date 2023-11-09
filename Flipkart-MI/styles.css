@@ -282,6 +282,7 @@ main {
     position: relative;
     /* padding-left: 4px;
     padding-right: 4px; */
+    max-width: 1317px
 }
 
 .like-button {
@@ -521,8 +522,9 @@ main {
 
 
 .searchbar-container {
-    min-width: 304px;
-    width: calc(100%-540px);
+    /* min-width: 304px; */
+    width: 304px;
+    max-width: 564px;
     margin: 0 20px 0 12px;
     height: 100%;
     justify-content: flex-start;
@@ -535,7 +537,7 @@ main {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23);
     width: 100%;
     height: 36px;
-    max-width: 564px;
+    /* max-width: 564px; */
     position: relative;
     /* display: none; */
 }
@@ -598,7 +600,7 @@ main {
 
 .nav-itm {
     display: none;
-    max-width: 1248px;
+    max-width: 1195px;
     height: 40px;
     margin: auto;
     justify-content: space-between;
@@ -1957,16 +1959,117 @@ footer,
 
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (min-width:1440px) {
     .header-items {
         padding-left: 89px;
     }
 
+
     .searchbar-container {
-        width: 534px
+        width: 535px
     }
+
+    /* .searchbar {s
+        width: 535px;
+    } */
 
     .header {
         height: 55px
+    }
+
+    .search-icon {
+        padding: 5px 5px 3px 0px;
+    }
+
+    .cart svg {
+        margin: 1px 5px 0px 7px;
+        padding-top: 4px;
+    }
+
+    .login-btn a {
+        padding: 5px 39.5px 5px 40px;
+    }
+
+    .nav-itm {
+        max-width: 1193px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-details h1 {
+        margin-top: 12px;
+    }
+
+    .sort {
+        padding: 8px 10px 7px 0;
+    }
+
+    .tabs div {
+        padding: 8px 0 6px
+    }
+
+    .like-button-lap {
+        top: 26px
+    }
+
+    .laptop-design-product .prod-name {
+        /* margin-bottom: 1px; */
+    }
+
+    .cust-rating {
+        position: relative;
+        top: 1px
+    }
+
+    .specifications ul {
+        margin-top: 14px;
+    }
+
+    .laptop-details {
+        padding-left: 13px;
+    }
+
+    .few-left {
+        margin-top: 6px;
+    }
+
+    .bank-offer {
+        margin-top: 5px
+    }
+
+    .content {
+        padding: 8px 4px 27px 4px;
+    }
+
+    .second-ad {
+        padding-right: 43px;
+    }
+
+    .desktop-box {
+        margin-top: 1px
+    }
+
+    .info {
+        border-top: 1px solid #454d5e;
+        padding: 25px 74px 26px 74px;
+    }
+
+
+}
+
+@media screen and (min-width:1800px) {
+    .searchbar-container {
+        margin: 0 48px 0 12px;
+        width: 564px;
+        max-width: 564px;
+    }
+
+    .header-items {
+        padding-left: 61px;
+        padding-right: 0px;
+    }
+
+    .card {
+        max-width: 1338px;
     }
 }
