@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background: #121212
+    background: #121212;
+    height: 100vh
 }
 
 @font-face {
@@ -101,6 +102,7 @@ header {
     position: relative;
     top: 56px;
     box-sizing: border-box;
+    /* height: 85.8vh */
 }
 
 main {
@@ -131,7 +133,7 @@ main {
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    overflow-x: scroll;
+    overflow-x: auto;
     position: relative;
     right: 50%;
     width: 100vw;
@@ -150,6 +152,7 @@ main {
     margin-block: 8px;
     margin-inline: 8px;
     /* margin-inline-start: 8px; */
+    min-width: 172px;
 }
 
 .first-card .img-sec,
@@ -176,6 +179,11 @@ main {
     font-weight: 400;
     font-family: circular-book;
     /* margin-inline-start: 8px; */
+}
+
+footer {
+    grid-area: now-playing-bar;
+    width: 100%
 }
 
 /* footer {
@@ -207,6 +215,15 @@ main {
     align-items: center;
     padding: 10px 11px;
     color: #b3b3b3
+}
+
+.section-2 {
+    background: #121212;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 85.8vh */
 }
 
 .library {
@@ -311,8 +328,9 @@ main {
     border-top-right-radius: 8px;
     display: none;
     align-items: center;
-    padding: 0px 10px 0px 24px;
+    padding: 0px clamp(16px, 16px + (100vw - 420px - 0px - 600px)/424*8, 24px);
     font-size: 16px;
+
 
 }
 
@@ -322,13 +340,26 @@ main {
     opacity: 0.6
 }
 
+.arrow div {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .arrow img {
     width: 16px;
     height: 16px
 }
 
 .signup {
-    color: #a7a7a7
+    color: #a7a7a7;
+    padding-inline-end: 32px;
 }
 
 .right-sec {
@@ -346,8 +377,74 @@ main {
     font-family: circular-bold;
 }
 
-.login span {
-    /* padding: 8px 32px; */
+.music-sec {
+    /* padding-top: 8px; */
+    width: 100%;
+    padding: 0px clamp(16px, 16px + (100vw - 420px - 0px - 600px)/424*8, 24px);
+    padding-top: 8px;
+}
+
+.para {
+    color: rgb(167, 167, 167);
+    font-size: 14px;
+    font-family: circular-book;
+    margin-top: 4px;
+    max-width: 168px;
+    max-height: 40px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-sec {
+    display: none;
+    /* min-width: 620px; */
+    padding: 11px 24px 7px 15px;
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+    box-sizing: border-box;
+    margin: 0 8px;
+}
+
+.top {
+    margin: 0 0 4px;
+    color: #fff
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.ftr-btn {
+    font-family: circular-bold;
+    border-radius: 9999px;
+}
+
+.ftr-btn span {
+    padding: 13px 32px;
+    background: #fff;
+    color: #000;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+}
+
+.top p:first-child {
+    font-family: circular-book;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.top p:nth-child(2) {
+    font-family: circular-book;
+    font-size: 16px;
 }
 
 @media screen and (min-width:768px) {
@@ -359,7 +456,11 @@ main {
 @media screen and (min-width:1024px) {
 
     .container {
+        grid-area: main-view;
         padding: 0;
+        /* width: calc(100%-420px) */
+        position: relative;
+
     }
 
     body {
@@ -379,9 +480,7 @@ main {
         height: 100%
     }
 
-    .card {
-        display: none;
-    }
+
 
     .main-sec {
         position: relative;
@@ -398,6 +497,9 @@ main {
         gap: 8px;
         height: 100%;
         width: 100%;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        /* row-gap: 12px */
     }
 
     .aside {
@@ -405,6 +507,7 @@ main {
         width: 420px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         row-gap: 8px;
 
         /* background: #212121; */
@@ -412,8 +515,10 @@ main {
 
     .container {
         grid-area: main-view;
-        width: calc(100vw-421px);
-        /* background: #212121; */
+        /* width: calc(100vw-421px); */
+        background: #121212;
+        position: relative;
+        overflow: visible
     }
 
     .nav-area {
@@ -457,5 +562,116 @@ main {
     .header {
         display: flex;
         justify-content: space-between;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 0 16px; */
+        align-items: center;
+        padding-right: 32px;
+    }
+
+    .heading h2,
+    .heading {
+        margin: 0
+    }
+
+    .heading span {
+        font-size: 14px;
+        color: #b3b3b3;
+        font-family: circular-bold;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    .music-sec {
+        width: 100%
+    }
+
+    .card {
+        margin: 0;
+        background: #181818;
+        padding: 16px;
+        row-gap: 16px;
+        min-width: 170.63px
+    }
+
+    .card .title {
+        font-size: 16px;
+        font-family: circular-bold;
+    }
+
+    .music-list {
+        display: flex;
+        /* min-width: 372px; */
+        position: static;
+        margin: 0;
+        /* padding: 22px 16px 22px 16px; */
+        overflow: auto;
+        /* margin-left: 20px; */
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 18px;
+        padding-top: 22px;
+        width: 93%;
+        ;
+        overflow-x: hidden;
+    }
+
+
+    .img-sec {
+        width: 139px;
+        height: 139px;
+        flex-grow: 1;
+        border-radius: 6px;
+    }
+
+    .rapo {
+        width: 138px;
+        /* position: relative; */
+
+    }
+
+    .img-sec img {
+        border-radius: 6px;
+        object-fit: cover;
+
+    }
+
+    .first-card .img-sec,
+    .first-card .title {
+        margin-inline-start: 0px;
+    }
+
+    .footer-sec {
+        display: block;
+        /* justify-content: space-between; */
+        /* width: 98.4%; */
+        /* position: absolute;
+        bottom: 8px; */
+        /* margin-right: 8px; */
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .music-sec {
+        width: 98.4%
+    }
+
+    .music-list {
+        column-gap: 24px;
+        width: 100%
+    }
+
+    .card {
+        min-width: 170.44px;
+        row-gap: 17px;
+    }
+
+    .img-sec {
+        width: 138.42px;
+        height: 138.42px
     }
 }
