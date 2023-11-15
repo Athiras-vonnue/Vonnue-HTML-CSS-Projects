@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: regular;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -31,6 +32,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .menu-btn {
@@ -78,6 +80,7 @@ body {
     line-height: 22px;
     /* letter-spacing: -0.04ch; */
 }
+
 
 .menu-itm span {
     padding: 0px 12px;
@@ -335,7 +338,7 @@ h3 {
     font-size: 32px;
     font-weight: 700px;
     line-height: 40px;
-    letter-spacing: -0.04ch0;
+    letter-spacing: -0.04ch;
     color: rgb(25, 25, 25);
     font-family: tt-bold;
     /* font-family: tt-medium; */
@@ -361,15 +364,16 @@ h3 {
     background: transparent;
     /* justify-content: flex-start; */
     font-family: tt-medium;
+    padding: 0;
 }
 
 .card-btn span {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 0ch;
+    letter-spacing: -0.04ch;
     color: #eb1700;
-    font-family: tt-medium;
+    font-family: tt-bold;
 }
 
 .sections {
@@ -378,7 +382,12 @@ h3 {
     align-items: center;
     flex-direction: column;
     min-width: 90%;
+    box-sizing: border-box;
 
+}
+
+.card-btn svg {
+    margin-left: 4px;
 }
 
 .image {
@@ -397,6 +406,14 @@ h3 {
     flex-direction: column;
 }
 
+.scroll-container h2 {
+    padding: 0px 40px;
+}
+
+.sections .content-area h2 {
+    padding: 0
+}
+
 .content-area h2,
 .to-dos,
 .head- {
@@ -407,7 +424,7 @@ h3 {
     color: #000;
     font-family: tt-bold;
     margin-top: 20px;
-    max-width: 89%;
+    /* max-width: 90%; */
 }
 
 .small- {
@@ -460,6 +477,7 @@ h3 {
     align-items: center;
     padding-top: 320px;
     margin-top: -300px;
+    box-sizing: border-box;
 }
 
 .banner-mid {
@@ -505,10 +523,15 @@ h3 {
     padding: 40px 20px 20px;
     width: 100%;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .to-dos span {
     width: 90%
+}
+
+.gift {
+    margin-top: 0px;
 }
 
 .scroll-container {
@@ -528,12 +551,12 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    min-width: 79%;
+    width: 80.6%;
     align-items: center;
     /* margin-left: 5%; */
     /* margin-right: -10%; */
     text-align: center;
-    margin-right: -15px;
+    margin-right: -19px;
 }
 
 
@@ -611,7 +634,8 @@ footer {
 
 }
 
-.popular-category {
+.popular-category,
+.apps {
     padding-top: 32px;
     padding-bottom: 32px;
     flex: 1 1 0%;
@@ -619,7 +643,7 @@ footer {
 }
 
 .apps-store {
-    padding-top: 32px;
+    /* padding-top: 32px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -652,7 +676,7 @@ footer {
 .footer-btm {
     display: flex;
     justify-content: space-between;
-    padding: 32px 0px 0px;
+    padding: 0px 0px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -664,15 +688,12 @@ footer {
 }
 
 .social-icons a:nth-child(2) {
-    margin-left: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .language {
     padding: 12px;
-}
-
-.social-icons a:nth-child(3) {
-    margin-left: 12px;
 }
 
 .inner-div {
@@ -696,14 +717,15 @@ footer {
 }
 
 .glob {
-    margin-right: 8px;
+    margin-right: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .select {
-    width: 100%
+    width: 100%;
+    padding-top: 3px;
 }
 
 select {
@@ -722,8 +744,8 @@ select {
     height: 24px;
     width: 24px;
     position: absolute;
-    right: 7px;
-    top: 4px;
+    right: 12px;
+    top: 6px;
     background: white;
 }
 
@@ -744,5 +766,302 @@ select {
     letter-spacing: 0ch;
     color: rgb(196, 196, 196);
     font-family: tt-regular;
-    margin-left: 12px;
+    margin-left: 16px;
+}
+
+.title {
+    margin-top: 0px;
+}
+
+.tab {
+    display: none;
+}
+
+.location {
+    display: none;
+}
+
+.tab-image {
+    display: none;
+}
+
+@media screen and (min-width:425px) {
+    .get-app-cont {
+        max-width: 400px;
+        margin: 0 auto
+    }
+
+    .container {
+        padding: 8px 10px 8px 12px
+    }
+
+    .img-sec {
+        margin-right: 31.5px;
+    }
+
+    .to-dos {
+        padding: 40px 42px 20px;
+    }
+
+
+}
+
+@media screen and (min-width:768px) {
+    .banner {
+        box-sizing: border-box;
+        height: 650px;
+        padding: 0 8px;
+        background: url('Assets/hero_mobile.avif');
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        align-items: center;
+        position: relative
+    }
+
+    /* .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0
+
+    }
+
+    .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+    .menu-itm {
+        gap: 8px;
+        padding-right: 24px;
+        position: relative;
+    }
+
+    .menu-itm .menu-btn {
+        font-size: 18px;
+        height: 40px
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .tab {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        right: 50%
+    }
+
+    .logo {
+        margin-top: 8px;
+    }
+
+    .banner-txt {
+        margin-top: 66px;
+    }
+
+    .input-cont {
+        width: 302px
+    }
+
+    .search-container {
+        padding: 16px 8px 16px 20px;
+        border-radius: 32px;
+        /* margin-right: 12px; */
+        box-sizing: border-box;
+    }
+
+    .search-container .location {
+        margin-right: 10px;
+    }
+
+    .search-container .arrow {
+        margin-right: 8px
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    .location {
+        display: flex;
+    }
+
+    .get-app-cont {
+        display: none;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .img-sec img {
+        width: 124px;
+        height: 124px;
+    }
+
+    .img-sec {
+        margin-right: 64px;
+    }
+
+    .container {
+        padding: 8px 10px 8px 9px;
+        margin: 32px 0px 32px
+    }
+
+    .sections {
+        flex-direction: row-reverse;
+        gap: 60px;
+        max-width: 1184px;
+        /* height: 505px */
+    }
+
+    .content-area {
+        max-width: 400px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .content-area h2 {
+        line-height: 44px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.02ch;
+        margin-top: 25px;
+        max-width: 90%;
+    }
+
+    .small- {
+        line-height: 32px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.01ch;
+        margin-top: 20px;
+    }
+
+    .para {
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .locate {
+        height: 40px;
+        margin-top: 30px;
+    }
+
+    .locate span {
+        /* padding: 0px 12px; */
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%
+    }
+
+    .image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .section-color-bg {
+        margin-top: -55px;
+        flex-direction: row;
+        gap: 60px;
+        max-width: 1184px;
+        padding-top: 80px;
+        padding-bottom: 25px;
+    }
+
+    .tab-image {
+        display: flex;
+    }
+
+    .mob-image {
+        display: none;
+    }
+
+    .section-color-bg .para {
+        margin-top: 20px;
+    }
+
+    .banner-mid {
+        height: 600px
+    }
+
+    .banner-mid .content-area {
+        max-width: 550px;
+    }
+
+    .banner-mid h2 {
+        max-width: 90%;
+        padding: 0 17px
+    }
+
+    .grocery-heading {
+        margin-top: 20px !important
+    }
+
+    .sec3 {
+        padding-top: 60px;
+    }
+
+    .sec3 .para {
+        margin-top: 20px;
+    }
+
+    .sec3 h2 {
+        margin-top: 20px;
+    }
+
+    .gift {
+        margin-top: -37px;
+        line-height: 44px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.02ch;
+        text-align: center;
+        padding: 60px 102px 40px;
+
+    }
+
+    .gift span {
+        max-width: 550px;
+    }
+
+    .scroll-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    .content-scroll {
+        max-width: 50%;
+        min-width: 50%;
+        box-sizing: border-box;
+        margin-right: 0;
+    }
+
+    .card1 {
+        margin-left: 0;
+    }
+
+    .content-scroll .image {
+        height: auto
+    }
 }
