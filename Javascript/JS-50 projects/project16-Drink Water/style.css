@@ -90,7 +90,7 @@ h3 {
 }
 
 .percentage {
-    background-color: var(var(--fill-color));
+    background-color: var(--fill-color);
     display: flex;
     justify-content: center;
     align-items: center;
