@@ -24,12 +24,10 @@ body {
 .fill {
     background-image: url('bg.avif');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center center;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
+    height: 145px;
+    width: 145px;
+    cursor: pointer
 }
 
 .hold {
