@@ -20,7 +20,8 @@ body {
     width: 35%;
     position: absolute;
     top: 0;
-    left: o
+    left: 0;
+    transition: transform .5s ease-in-out
 }
 
 .left-slide>div {
@@ -44,7 +45,8 @@ body {
     position: absolute;
     top: 0;
     left: 35%;
-    width: 65%
+    width: 65%;
+    transition: transform .5s ease-in-out
 }
 
 .right-slide>div {
