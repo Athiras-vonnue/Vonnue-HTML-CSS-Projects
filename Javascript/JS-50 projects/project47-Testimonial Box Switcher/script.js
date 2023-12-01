@@ -1,101 +1,54 @@
-const quizData =[
+const testimonial_container = document.querySelector('.testimonial-container')
+const testimonial = document.querySelector('.testimonial')
+const user_img = document.querySelector('.user-image')
+const userName = document.querySelector('.username')
+const userRole = document.querySelector('.role')
+console.log(user_img)
+
+const testmonialData = [
     {
-    question: "Which language runs in a web browser?",
-    a:"java",
-    b:"C",
-    c:"Python",
-    d:"JavaScript",
-    correct:"d"
+        name : "Sasha Ho",
+        position:"Accountant",
+        photo:"photo3.jpeg",
+        text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     },
     {
-    question: "What does CSS stand for?",
-    a:"Centeral Style Sheets",
-    b:"Cascading Style Sheets",
-    c:"Cascading Simple Sheets",
-    d:"Cars SUV Sailboats",
-    correct:"b"
+        name : "Veeti Seppanen",
+        position:"Director",
+        photo:"photo1.avif",
+        text:"it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal"
     },
     {
-    question: "What does HTML stand for?",
-    a:"Hypertext Markup Language",
-    b:"Hypertext Markdown Language",
-    c:"Hyperloop Machine Language",
-    d:"Helicopters Terminals Motorboats Lamborginis",
-    correct:"a"
+        name : "John Doe",
+        position:"CEO",
+        photo:"photo2.jpeg",
+        text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     },
     {
-    question: "What year was Javascript launched?",
-    a:"1996",
-    b:"1995",
-    c:"1994",
-    d:"none of the above",
-    correct:"b"
+        name : "Angelina",
+        position:"Associate",
+        photo:"photo4.jpeg",
+        text:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
     }
-    ];
-    const quiz_container = document.getElementById('quiz')
-    const answerEls = document.querySelectorAll('.answer')
-    const questionEl = document.getElementById('question')
-    const a_text = document.getElementById('a_text')
-    const b_text = document.getElementById('b_text')
-    const c_text = document.getElementById('c_text')
-    const d_text = document.getElementById('d_text')
-    const submit_btn = document.getElementById('submit')
+]
+//updateTestimonial()
+let idx = 1;
 
-    let currentQuiz = 0;
-    let score = 0;
+function updateTestimonial(){
+    const{name, photo, position,text} = testmonialData[idx];
+    testimonial.innerHTML = text;
+    user_img.src = photo;
+    userName.innerHTML = name;
+    userRole.innerHTML = position;
 
-    loadQuiz()
+    idx++;
 
-    function loadQuiz(){
+   // console.log(idx);
 
-        deSelectAnswers();
-const currentQuizData = quizData[currentQuiz]
-questionEl.innerText = currentQuizData.question
-a_text.innerText = currentQuizData.a
-b_text.innerText = currentQuizData.b
-c_text.innerText = currentQuizData.c
-d_text.innerText = currentQuizData.d
-//deSelectAnswers();
+    if(idx > testmonialData.length -1){
+        idx = 0
     }
-
-function deSelectAnswers(){
-   // alert('deselected')
-    answerEls.forEach(answerEl=>{
-        answerEl.checked = false
-    })
-}  
-
-function getSelected(){
-    let answer;
-    answerEls.forEach(answerEl=>{
-        if(answerEl.checked){
-            answer = answerEl.id
-        }
-    })
-return answer;
 }
-submit_btn.addEventListener('click',()=>{
-    let answer = getSelected();
-   // console.log(answer)
-   if(answer){
-   if(answer === quizData[currentQuiz].correct){
-    //console.log(answer)
-    score++;
-    
-   }
-   currentQuiz++
-   if(currentQuiz < quizData.length){
+//updteaTestimonial()
 
-    loadQuiz()
-
-   }else{
-
-    quiz_container.innerHTML = `
-    <h2>You answered correctly at ${score} / ${quizData.length} questions</h2>
-    <button onclick = "location.reload()">Reload</button>
-    
-    `
-
-   }
-}
-})
+setInterval(updateTestimonial, 10000)
