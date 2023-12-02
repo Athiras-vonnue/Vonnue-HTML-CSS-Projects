@@ -9,6 +9,7 @@
  const ul_ele=document.getElementById("ul-ele")
  const delete_btn=document.getElementById("delete-btn")
  const save_btn=document.getElementById("save-btn")
+ 
  const leadsFromLocal=JSON.parse(localStorage.getItem("myLeads"))
 
 if(leadsFromLocal){  //checking leadsFromlocal is empty or not

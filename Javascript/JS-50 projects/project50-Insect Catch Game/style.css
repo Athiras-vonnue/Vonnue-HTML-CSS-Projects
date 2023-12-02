@@ -128,7 +128,7 @@ h1 {
 
 .message.visible {
     opacity: 1;
-    transform: translate(-50%, 150%);
+    transform: translate(0%, 150%);
 }
 
 .insect {
