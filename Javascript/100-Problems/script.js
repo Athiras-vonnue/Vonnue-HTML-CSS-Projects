@@ -196,4 +196,4 @@ console.log(
 
 //Q.11: Write a function to find and print the student with the highest marks in a specific subject.
 
-const findHighestMarkInSub()
+// const findHighestMarkInSub()
