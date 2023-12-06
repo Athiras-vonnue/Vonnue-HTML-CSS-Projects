@@ -51,7 +51,7 @@ let classObj = {
 
 /***************************************************************************/
 
-let studentsData = classObj.students;
+let students = classObj.students;
 
 //Q1: Write a function to print the name of the class: "class A"
 
@@ -65,21 +65,26 @@ console.log("Teacher Name:", printTeacherName());
 
 //Q3:Write a function to print the names of all the students in the class.
 
-const nameArray = [];
 const printStudentsName = () => {
-  for (i = 0; i < studentsData.length; i++) {
-    nameArray.push(studentsData[i].name);
+  const nameArray = [];
+  for (i = 0; i < students.length; i++) {
+    nameArray.push(students[i].name);
   }
+
   return nameArray;
 };
+
 console.log("Students Name:", printStudentsName());
 
 //Q4:Write a function to print the IDs of all the students in the class.
-const idArray = [];
+
 const printStudentsId = () => {
-  for (i = 0; i < studentsData.length; i++) {
-    idArray.push(studentsData[i].id);
+  const idArray = [];
+
+  for (i = 0; i < students.length; i++) {
+    idArray.push(students[i].id);
   }
+
   return idArray;
 };
 
@@ -87,10 +92,11 @@ console.log("Students Ids:", printStudentsId());
 
 //Q5: Write a function to print the subject names for a specific student.
 
-const studentID = "103";
-const subArray = [];
-const printSubjects = (studentID) => {
-  studentsData.forEach((student) => {
+const printSubjects = () => {
+  const studentID = "103";
+  const subArray = [];
+
+  students.forEach((student) => {
     if (studentID === student.id) {
       let subjects = student.marks;
       subjects.forEach((sub) => {
@@ -100,42 +106,51 @@ const printSubjects = (studentID) => {
   });
   return subArray;
 };
-console.log("Available Subjects:", printSubjects(studentID));
+console.log("Available Subjects:", printSubjects());
 
 //Q6: Write a function to print the marks of a specific student in all subjects.
 
-const printSubjectMarks = (studentID) => {
-  const arr = [];
-  studentsData.forEach((student) => {
+const printSubjectMarks = () => {
+  const subjectArr = [];
+  const studentID = "103";
+
+  students.forEach((student) => {
     if (studentID === student.id) {
       let subjects = student.marks;
+
       subjects.forEach((sub) => {
-        arr.push(`${sub.subject} : ${sub.mark}`);
+        subjectArr.push(`${sub.subject} : ${sub.mark}`);
       });
     }
   });
 
-  return arr;
+  return subjectArr;
 };
-console.log(printSubjectMarks(studentID));
-//Q7: Write a function to calculate and print the average marks for a specific student.
-let result = 0;
-let average = 0;
+console.log(printSubjectMarks());
 
-const findAverage = (studentID) => {
+//Q7: Write a function to calculate and print the average marks for a specific student.
+
+const findAverage = () => {
+  const studentID = "103";
+  let result = 0;
+  let average = 0;
+
   let total = findSum(studentID);
-  studentsData.forEach((student) => {
+  students.forEach((student) => {
     let subjects = student.marks;
     average = total / subjects.length;
   });
+
   return average;
 };
-console.log("Average mark Obtained:", findAverage(studentID));
+
+console.log("Average mark Obtained:", findAverage());
+
 //Q8: Write a function to calculate and print the total marks for a specific student.
 
 function findSum(studentID) {
-  result = 0;
-  studentsData.forEach((student) => {
+  let result = 0;
+  students.forEach((student) => {
     if (studentID === student.id) {
       let subjects = student.marks;
       for (let i = 0; i < subjects.length; i++) {
@@ -146,197 +161,247 @@ function findSum(studentID) {
 
   return result;
 }
+const studentID = "103";
 console.log("Total Marks:" + findSum(studentID));
 
 //Q9: Write a function to calculate and print the average marks for all students in a specific subject.
-const subject = {
-  eng: "English",
-  mat: "Maths",
-  phy: "Physics",
-  chem: "Chemistry",
-  cs: "Computer",
-};
-let totalObtained = 0;
-let avgObtained = 0;
 
-const avgSubMarks = (selectedSub) => {
-  studentsData.forEach((student) => {
+const subject = {
+  english: "English",
+  maths: "Maths",
+  physics: "Physics",
+  chemistry: "Chemistry",
+  computer: "Computer",
+};
+
+const avgSubMarks = (subject) => {
+  let totalObtained = 0;
+  let avgObtained = 0;
+
+  students.forEach((student) => {
     let subjects = student.marks;
+
     subjects.forEach((sub) => {
-      if (selectedSub === sub.subject) {
+      if (subject === sub.subject) {
         totalObtained += sub.mark;
-        avgObtained = totalObtained / studentsData.length;
+        avgObtained = totalObtained / students.length;
       }
     });
   });
+
   return avgObtained;
 };
+
 console.log(
   "Average Obtained in subject:",
-  subject.phy,
+  subject.english,
   ":",
-  avgSubMarks(subject.phy)
+  avgSubMarks(subject.english)
 );
+
 //Q10: Write a function to calculate and print the total marks for all students in a specific subject.
 
 const totalSubMarks = (selectedSub) => {
-  studentsData.forEach((student) => {
+  let totalObtained = 0;
+
+  students.forEach((student) => {
     let subjects = student.marks;
+
     subjects.forEach((sub) => {
       if (selectedSub.toLowerCase() === sub.subject.toLowerCase()) {
         totalObtained += sub.mark;
       }
     });
   });
+
   return totalObtained;
 };
+
 console.log(
   "Total Obtained in subject:",
-  subject.phy,
+  subject.physics,
   ":",
-  totalSubMarks(subject.phy)
+  totalSubMarks(subject.physics)
 );
+
+//Function to find the lowest and highest mark of a student
+
+const studentsWithMarkInSub = (operation, score) => {
+  const selectedSub = "Maths";
+
+  students.forEach((student) => {
+    let subjectMark = student.marks.find(
+      (sub) => sub.subject === selectedSub
+    ).mark;
+
+    if (operation == "highestScore") {
+      if (subjectMark > score) score = subjectMark;
+    } else if (operation == "lowestScore") {
+      if (subjectMark < score) score = subjectMark;
+    }
+  });
+
+  let resultarray = students.map((student) => {
+    if (student.marks.find((sub) => sub.mark === score)) return student.name;
+  });
+
+  return resultarray.filter((name) => name !== undefined);
+};
 
 //Q.11: Write a function to find and print the student with the highest marks in a specific subject.
 
-const studentsWithHighestMarkInSub = (selectedSub) => {
-  let highestScore = 0;
-  studentsData.forEach((student) => {
-    let result = student.marks.find((sub) => sub.subject === selectedSub).mark;
-    if (result > highestScore) highestScore = result;
-  });
-  let resultarray = studentsData.map((student) => {
-    if (student.marks.find((sub) => sub.mark === highestScore))
-      return student.name;
-  });
-  return resultarray.filter((name) => name !== undefined);
+const studentsWithHighestMarkInSub = () => {
+  let operation = "highestScore";
+  let mark = 0;
+
+  return studentsWithMarkInSub(operation, mark);
 };
 
-console.log(studentsWithHighestMarkInSub(subject.mat));
+console.log(studentsWithHighestMarkInSub());
 
 //Q.12 Write a function to find and print the student with the lowest marks in a specific subject.
 
-const studentWithLowestMarkInSub = (selectedSub) => {
-  let lowestScore = 100;
-  studentsData.forEach((student) => {
-    let marks = student.marks.find((sub) => sub.subject === selectedSub).mark;
-    if (marks < lowestScore) lowestScore = marks;
-  });
-  let resultarray = studentsData.map((student) => {
-    if (student.marks.find((sub) => sub.mark === lowestScore))
-      return student.name;
-  });
-  return resultarray.filter((name) => name !== undefined);
-};
-console.log(studentWithLowestMarkInSub(subject.mat));
+const studentsWithLowestMarkInSub = () => {
+  let operation = "lowestScore";
+  let mark = 100;
 
-//Q 13: Write a function to find and print the student with the highest total marks.
-let highestScore = 0;
-const studentWithHighestTotal = () => {
-  let sumArray = studentsData.map((student, idx) => {
+  return studentsWithMarkInSub(operation, mark);
+};
+
+console.log(studentsWithLowestMarkInSub());
+
+//Function to find and print the student with the highest & lowest total marks
+
+const studentWithTotal = (operation, score) => {
+  let sumArray = students.map((student) => {
     let totalObtained = findSum(student.id);
-    if (totalObtained > highestScore) {
-      highestScore = totalObtained;
-    }
     let name = student.name;
+
+    if (operation == "highestTotal") {
+      if (totalObtained > score) {
+        score = totalObtained;
+      }
+    } else if (operation == "lowestTotal") {
+      if (totalObtained < score) {
+        score = totalObtained;
+      }
+    }
+
     return { name, totalObtained };
   });
-  return sumArray.filter((sum) => sum.totalObtained === highestScore);
+
+  return sumArray.filter((sum) => sum.totalObtained === score);
 };
+
+//Q 13: Write a function to find and print the student with the highest total marks.
+
+const studentWithHighestTotal = () => {
+  let operation = "highestTotal";
+  let score = 0;
+
+  return studentWithTotal(operation, score);
+};
+
 console.log(studentWithHighestTotal());
 
 //Q 14: Write a function to find and print the student with the lowest total marks.
 
-let lowestScore = 500;
 const studentWithLowestTotal = () => {
-  let sumArray = studentsData.map((student, idx) => {
-    let totalObtained = findSum(student.id);
-    if (totalObtained < lowestScore) {
-      lowestScore = totalObtained;
-    }
-    let name = student.name;
-    return { name, totalObtained };
-  });
-  return sumArray.filter((sum) => sum.totalObtained === lowestScore);
+  let operation = "lowestTotal";
+  let score = 500;
+
+  return studentWithTotal(operation, score);
 };
+
 console.log(studentWithLowestTotal());
 
-//Q15: Write a function to find and print the subject with the highest average marks.
-let highestAverage = 0;
-const subjectArray = [];
-const avgArray = [];
-let total = 0;
-let averageMark = 0;
+//Function to store subjects in an array
 
-const subWithHighestAvg = () => {
-  let subjectWithHighestAvg = "";
-  studentsData.forEach((student) => {
+const subjects = () => {
+  const subjectArray = [];
+
+  students.forEach((student) => {
     let subjects = student.marks;
+
     subjects.map((sub) => {
       if (!subjectArray.includes(sub.subject)) {
         subjectArray.push(sub.subject);
       }
     });
   });
+
+  return subjectArray;
+};
+
+console.log(subjects());
+
+//Function to find subject with the highest and lowest average marks
+
+const subjectWithAvg = (operation, highestAverage) => {
+  const subjectArray = subjects();
+  let avgArray = [];
+
   subjectArray.map((subject) => {
-    total = 0;
-    studentsData.forEach((student) => {
+    let total = 0;
+    let subjectName = subject;
+
+    students.forEach((student) => {
       student.marks.find((sub) => {
         if (sub.subject === subject) {
           total += sub.mark;
-          subjectWithHighestAvg = sub.subject;
         }
       });
     });
-    averageMark = total / studentsData.length;
-    if (highestAverage < averageMark) {
-      highestAverage = averageMark;
+
+    let average = total / students.length;
+
+    if (operation == "highestAverage") {
+      if (highestAverage < average) {
+        highestAverage = average;
+      }
+    } else if (operation == "lowestAverage") {
+      if (highestAverage > average) {
+        highestAverage = average;
+      }
     }
-    avgArray.push({ subjectWithHighestAvg, averageMark });
+    avgArray.push({ subjectName, average });
   });
 
-  return avgArray.filter((avg) => avg.averageMark === highestAverage);
+  return avgArray.filter((avg) => avg.average === highestAverage);
+};
+
+//Q15: Write a function to find and print the subject with the highest average marks.
+
+const subWithHighestAvg = () => {
+  let operation = "highestAverage";
+  let highestAverage = 0;
+
+  return subjectWithAvg(operation, highestAverage);
 };
 console.log(subWithHighestAvg());
 
 //Q16: Write a function to find and print the subject with the lowest average marks.
 
-let lowestAverage = 100;
-const averageArray = [];
-let averageGrade = 0;
 const subWithLowestAvg = () => {
-  let subjectWithLowestAvg = "";
-  subjectArray.map((subject) => {
-    let sum = 0;
-    subjectWithLowestAvg = subject;
-    studentsData.forEach((student) => {
-      student.marks.find((sub) => {
-        if (sub.subject === subject) {
-          sum += sub.mark;
-        }
-      });
-    });
-    averageGrade = sum / studentsData.length;
-    if (lowestAverage > averageGrade) {
-      lowestAverage = averageGrade;
-    }
+  let operation = "lowestAverage";
+  let lowestAverage = 100;
 
-    averageArray.push({ subjectWithLowestAvg, averageGrade });
-  });
-  return averageArray.filter((avg) => avg.averageGrade === lowestAverage);
+  return subjectWithAvg(operation, lowestAverage);
 };
 console.log(subWithLowestAvg());
 
-//  Q17: Write a function to calculate and print the overall marks for the class.
+//Q17: Write a function to calculate and print the overall marks for the class.
 
 const overallMarks = () => {
   let sum = 0;
-  studentsData.forEach((student) => {
+
+  students.forEach((student) => {
     let subject = student.marks;
     subject.map((sub) => {
       sum += sub.mark;
     });
   });
+
   return sum;
 };
 
@@ -346,45 +411,54 @@ console.log(overallMarks());
 
 const overallAvgMark = () => {
   let overallAverage = 0;
-  studentsData.forEach((student) => {
+
+  students.forEach((student) => {
     let subject = student.marks;
     let sum = overallMarks();
-    let length = subject.length * studentsData.length;
+    let length = subject.length * students.length;
 
     overallAverage = sum / length;
   });
+
   return overallAverage;
 };
+
 console.log(overallAvgMark());
 
 //Q19:Write a function to calculate and print the total marks for each subject.
 
-const totalMarkForSubjects = () => {
+const totalMarksForSubjects = () => {
+  let subjectArray = subjects();
   let resultArray = subjectArray.map((subject) => {
     total = 0;
-    studentsData.forEach((student) => {
+
+    students.forEach((student) => {
       student.marks.find((sub) => {
         if (sub.subject === subject) {
           total += sub.mark;
         }
       });
     });
+
     return { subject, total };
   });
+
   return resultArray;
 };
-console.log(totalMarkForSubjects());
+console.log(totalMarksForSubjects());
 
 //Q20:Write a function to calculate and print the average marks for each subject.
 
 const avgMarkForSubjects = () => {
-  let totalMarks = totalMarkForSubjects();
+  let totalMarks = totalMarksForSubjects();
+
   let resultArray = totalMarks.map((mark) => {
     let average = 0;
-    average = mark.total / studentsData.length;
+    average = mark.total / students.length;
     let sub = mark.subject;
     return { sub, average };
   });
+
   return resultArray;
 };
 
