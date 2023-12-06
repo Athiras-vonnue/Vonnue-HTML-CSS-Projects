@@ -463,3 +463,177 @@ const avgMarkForSubjects = () => {
 };
 
 console.log(avgMarkForSubjects());
+
+//21: Write a function to find and print the subject with the highest total marks.
+
+const highestTotalMark = () => {
+  let highestTotal = 0;
+  let markArray = totalMarksForSubjects();
+
+  markArray.map((mark) => {
+    if (highestTotal < mark.total) highestTotal = mark.total;
+  });
+
+  return markArray.filter((mark) => mark.total === highestTotal);
+};
+
+console.log(highestTotalMark());
+
+//Q22: Write a function to find and print the subject with the lowest total marks.
+
+const lowestTotalMark = () => {
+  let lowestTotal = 200;
+  let markArray = totalMarksForSubjects();
+
+  markArray.map((mark) => {
+    if (lowestTotal > mark.total) lowestTotal = mark.total;
+  });
+
+  return markArray.filter((mark) => mark.total === lowestTotal);
+};
+
+console.log(lowestTotalMark());
+
+//function to find and print the student(s) with the highest & lowest average marks.
+const averageMark = (operation) => {
+  let average = 0;
+  let name;
+  let highestTotal = operation;
+  let allSubjects = subjects();
+
+  highestTotal.map((total) => {
+    average = total.totalObtained / allSubjects.length;
+    name = total.name;
+  });
+
+  return { name, average };
+};
+
+//Q23: Write a function to find and print the student(s) with the highest average marks.
+
+const highestAverageMark = () => {
+  let getHighestTotal = studentWithHighestTotal();
+
+  return averageMark(getHighestTotal);
+};
+
+console.log(highestAverageMark());
+
+//Q24: Write a function to find and print the student(s) with the lowest average marks.
+
+const lowestAvgMark = () => {
+  let getLowestTotal = studentWithLowestTotal();
+
+  return averageMark(getLowestTotal);
+};
+
+console.log(lowestAvgMark());
+
+//Q25: Write a function to find and print the student(s) with the highest total marks.
+
+const printStudentWithHighestTotal = () => {
+  return studentWithHighestTotal();
+};
+
+console.log(printStudentWithHighestTotal());
+
+//Q26: Write a function to find and print the student(s) with the lowest total marks.
+
+const printStudentWithLowestTotal = () => {
+  return studentWithLowestTotal();
+};
+
+console.log(printStudentWithLowestTotal());
+
+//function to calculate and print the number of students who scored above & below a certain mark in a specific subject
+
+getStudentsCountBasedSpecificMarkInSub = (condition) => {
+  let count = 0;
+  const subject = "English";
+  const specificMark = 40;
+
+  students.forEach((student) => {
+    const marks = student.marks;
+
+    marks.find((mark) => {
+      if (mark.subject === subject) {
+        if (condition == "above") {
+          if (mark.mark >= specificMark) {
+            count++;
+          }
+        } else if (condition == "below") {
+          if (mark.mark <= specificMark) {
+            count++;
+          }
+        }
+      }
+    });
+  });
+
+  return count;
+};
+
+//Q27: Write a function to calculate and print the number of students who scored above a certain mark in a specific subject.
+
+getStudentsCountAboveSpecificMarkInSub = () => {
+  let condition = "above";
+
+  return getStudentsCountBasedSpecificMarkInSub(condition);
+};
+
+console.log(getStudentsCountAboveSpecificMarkInSub());
+
+//Q28: Write a function to calculate and print the number of students who scored below a certain mark in a specific subject.
+
+getStudentsCountBelowSpecificMarkInSub = () => {
+  let condition = "below";
+
+  return getStudentsCountBasedSpecificMarkInSub(condition);
+};
+
+console.log(getStudentsCountBelowSpecificMarkInSub());
+
+//Write a function to calculate and print the number of students who scored above & below a certain mark in all subjects.
+
+const countofStudentsScoredSpecificMarkInAllSub = (condition) => {
+  let count = 0;
+  let specificMark = 40;
+
+  students.forEach((student) => {
+    const marks = student.marks;
+
+    marks.find((mark) => {
+      if (condition == "above") {
+        if (mark.mark >= specificMark) {
+          count++;
+        }
+      } else if (condition == "below") {
+        if (mark.mark < specificMark) {
+          count++;
+        }
+      }
+    });
+  });
+
+  return count;
+};
+
+//Q29: Write a function to calculate and print the number of students who scored above a certain mark in all subjects.
+
+const countofStudentsScoredAboveMarkInAllSub = () => {
+  let condition = "above";
+
+  return countofStudentsScoredSpecificMarkInAllSub(condition);
+};
+
+console.log(countofStudentsScoredAboveMarkInAllSub());
+
+//Q30: Write a function to calculate and print the number of students who scored below a certain mark in all subjects.
+
+const countStudentsScoredBelowMarkInAllSub = () => {
+  let condition = "below";
+
+  return countofStudentsScoredSpecificMarkInAllSub(condition);
+};
+
+console.log(countStudentsScoredBelowMarkInAllSub());
