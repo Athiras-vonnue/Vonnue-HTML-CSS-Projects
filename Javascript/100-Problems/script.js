@@ -388,6 +388,7 @@ const subWithLowestAvg = () => {
 
   return subjectWithAvg(operation, lowestAverage);
 };
+
 console.log(subWithLowestAvg());
 
 //Q17: Write a function to calculate and print the overall marks for the class.
