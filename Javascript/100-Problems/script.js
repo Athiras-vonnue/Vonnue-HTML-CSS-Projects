@@ -548,7 +548,7 @@ console.log(printStudentWithLowestTotal());
 
 //function to calculate and print the number of students who scored above & below a certain mark in a specific subject
 
-getStudentsCountBasedSpecificMarkInSub = (condition) => {
+const getStudentsCountBasedSpecificMarkInSub = (condition) => {
   let count = 0;
   const subject = "English";
   const specificMark = 40;
@@ -576,7 +576,7 @@ getStudentsCountBasedSpecificMarkInSub = (condition) => {
 
 //Q27: Write a function to calculate and print the number of students who scored above a certain mark in a specific subject.
 
-getStudentsCountAboveSpecificMarkInSub = () => {
+const getStudentsCountAboveSpecificMarkInSub = () => {
   let condition = "above";
 
   return getStudentsCountBasedSpecificMarkInSub(condition);
@@ -586,7 +586,7 @@ console.log(getStudentsCountAboveSpecificMarkInSub());
 
 //Q28: Write a function to calculate and print the number of students who scored below a certain mark in a specific subject.
 
-getStudentsCountBelowSpecificMarkInSub = () => {
+const getStudentsCountBelowSpecificMarkInSub = () => {
   let condition = "below";
 
   return getStudentsCountBasedSpecificMarkInSub(condition);
@@ -638,3 +638,4 @@ const countStudentsScoredBelowMarkInAllSub = () => {
 };
 
 console.log(countStudentsScoredBelowMarkInAllSub());
+
