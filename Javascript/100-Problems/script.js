@@ -597,11 +597,13 @@ console.log(getStudentsCountBelowSpecificMarkInSub());
 //Write a function to calculate and print the number of students who scored above & below a certain mark in all subjects.
 
 const countofStudentsScoredSpecificMarkInAllSub = (condition) => {
-  let count = 0;
-  let specificMark = 40;
+  let specificMark = 20;
+  let studentCount = 0;
+  let count;
 
   students.forEach((student) => {
     const marks = student.marks;
+    count = 0;
 
     marks.find((mark) => {
       if (condition == "above") {
@@ -614,9 +616,15 @@ const countofStudentsScoredSpecificMarkInAllSub = (condition) => {
         }
       }
     });
+
+    if (count === 5 && count != 0 && condition == "above") {
+      studentCount++;
+    } else if (count < 5 && count != 0 && condition == "below") {
+      studentCount++;
+    }
   });
 
-  return count;
+  return studentCount;
 };
 
 //Q29: Write a function to calculate and print the number of students who scored above a certain mark in all subjects.
@@ -638,4 +646,3 @@ const countStudentsScoredBelowMarkInAllSub = () => {
 };
 
 console.log(countStudentsScoredBelowMarkInAllSub());
-
