@@ -1013,3 +1013,35 @@ const SubjectWithAvgMArkBelowCertainMark = (specificMark) => {
 };
 
 console.log(SubjectWithAvgMArkBelowCertainMark(35));
+
+//Q47: Write a function to find and print the student(s) who scored the highest marks in at least one subject.
+
+const studentWithMarkAtLeastOneSubject = () => {
+  const students = classObj.students;
+  let mark = 0;
+  let subjectName = "";
+  let studentName = "";
+  let nameArray = [];
+  const markArray = subjects().map((subject) => {
+    subjectName = subject;
+    students.map((student) => {
+      studentName = student.name;
+      const subjects = student.marks;
+
+      subjects.find((sub) => {
+        if (sub.subject === subject) {
+          if (mark < sub.mark) {
+            mark = sub.mark;
+          } else if (mark === sub.mark) {
+            mark = sub.mark;
+          }
+        }
+      });
+      //return { studentName, subjectName, mark };
+    });
+    return { studentName, subjectName, mark };
+  });
+  return markArray;
+};
+
+console.log(studentWithMarkAtLeastOneSubject());
