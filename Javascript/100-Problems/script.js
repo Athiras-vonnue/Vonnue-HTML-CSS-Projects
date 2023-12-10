@@ -1032,14 +1032,16 @@ const studentWithMarkAtLeastOneSubject = () => {
         if (sub.subject === subject) {
           if (mark < sub.mark) {
             mark = sub.mark;
+            //return nameArray.push(studentName);
           } else if (mark === sub.mark) {
             mark = sub.mark;
+            // return nameArray.push(studentName);
           }
         }
       });
       //return { studentName, subjectName, mark };
     });
-    return { studentName, subjectName, mark };
+    return nameArray.push(studentName);
   });
   return markArray;
 };
