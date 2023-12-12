@@ -304,7 +304,7 @@ const studentWithHighestTotal = () => {
 
 console.log(studentWithHighestTotal());
 
-//Q 14: Write a function to find and print the student with the lowest total marks.
+//Q14: Write a function to find and print the student with the lowest total marks.
 
 const studentWithLowestTotal = () => {
   let operation = "lowestTotal";
@@ -850,3 +850,309 @@ const studentWithLowestPercentageInSubject = (subjectName) => {
 };
 
 console.log(studentWithLowestPercentageInSubject("Maths"));
+
+//function to find and print the subject(s) with the highest/lowest percentage of marks for a specific student
+
+const printSubjectPercentageOfStudent = (
+  studentName,
+  option,
+  obtainedPercentage
+) => {
+  const students = classObj.students;
+  const totalmark = 50;
+  let subjectName = "";
+  let subjectArray = [];
+  let subjectMark = 0;
+
+  students.find((student) => {
+    const subjects = student.marks;
+
+    if (student.name === studentName) {
+      subjectArray = subjects.map((subject) => {
+        subjectName = subject.subject;
+        subjectMark = subject.mark;
+
+        switch (option) {
+          case "highest":
+            if (obtainedPercentage <= subject.mark) {
+              obtainedPercentage = subject.mark;
+            }
+            break;
+
+          case "lowest":
+            if (obtainedPercentage >= subject.mark) {
+              obtainedPercentage = subject.mark;
+            }
+            break;
+
+          default:
+            return "Entered functionality not available! Please Enter the correct one";
+        }
+
+        const percentages = percentage(subjectMark, totalmark);
+        return { studentName, subjectName, percentages };
+      });
+    }
+  });
+
+  return subjectArray.filter(
+    (subject) =>
+      subject.percentages === percentage(obtainedPercentage, totalmark)
+  );
+};
+
+//Q41: Write a function to find and print the subject(s) with the highest percentage of marks for a specific student.
+
+const printSubjectWithHighestPercentageOfStudent = (studentName) => {
+  const option = "highest";
+  const obtainedPercentage = 0;
+
+  return printSubjectPercentageOfStudent(
+    studentName,
+    option,
+    obtainedPercentage
+  );
+};
+
+console.log(printSubjectWithHighestPercentageOfStudent("Ravi"));
+
+//Q42: Write a function to find and print the subject(s) with the lowest percentage of marks for a specific student
+
+const printSubjectWithLowestPercentageOfStudent = (studentName) => {
+  const option = "lowest";
+  const obtainedPercentage = 50;
+
+  return printSubjectPercentageOfStudent(
+    studentName,
+    option,
+    obtainedPercentage
+  );
+};
+
+console.log(printSubjectWithLowestPercentageOfStudent("Ravi"));
+
+//function to find and print the subject(s) in which all students scored above/below a certain mark.
+
+const subjectWithAllStudentsScoredBasedOnSpecificMark = (choice) => {
+  const students = classObj.students;
+  const specificMark = 20;
+  let subjectName = "";
+  let countOfStudents = 0;
+
+  const resArray = subjects().map((sub) => {
+    subjectName = sub;
+    countOfStudents = 0;
+
+    students.map((student) => {
+      const subjects = student.marks;
+
+      subjects.find((subject) => {
+        if (sub === subject.subject) {
+          switch (choice) {
+            case "above":
+              if (subject.mark >= specificMark) {
+                countOfStudents++;
+              }
+              break;
+
+            case "below":
+              if (subject.mark < specificMark) {
+                countOfStudents++;
+              }
+              break;
+
+            default:
+              return "Entered functionality not available! Please Enter the correct one";
+          }
+        }
+      });
+    });
+
+    return { subjectName, countOfStudents };
+  });
+
+  return resArray.filter((res) => res.countOfStudents === students.length);
+};
+
+//Q43: Write a function to find and print the subject(s) in which all students scored above a certain mark.
+
+const subjectWithAllStudentsScoredAboveOnSpecificMark = () => {
+  const option = "above";
+
+  return subjectWithAllStudentsScoredBasedOnSpecificMark(option);
+};
+
+console.log(subjectWithAllStudentsScoredAboveOnSpecificMark());
+
+//Q44: Write a function to find and print the subject(s) in which all students scored below a certain mark.
+
+const subjectWithAllStudentsScoredBelowOnSpecificMark = () => {
+  const option = "below";
+
+  return subjectWithAllStudentsScoredBasedOnSpecificMark(option);
+};
+
+console.log(subjectWithAllStudentsScoredBelowOnSpecificMark());
+
+//Q45: Write a function to find and print the subject(s) in which the average marks of all students are above a certain mark.
+
+const SubjectWithAvgMarkAboveCertainMark = (specificMark) => {
+  return avgMarkForSubjects().filter(
+    (average) => average.average >= specificMark
+  );
+};
+
+console.log(SubjectWithAvgMarkAboveCertainMark(35));
+
+//Q46: Write a function to find and print the subject(s) in which the average marks of all students are below a certain mark.
+
+const SubjectWithAvgMArkBelowCertainMark = (specificMark) => {
+  return avgMarkForSubjects().filter(
+    (average) => average.average < specificMark
+  );
+};
+
+console.log(SubjectWithAvgMArkBelowCertainMark(35));
+
+//Function to find and print the highest/lowest marks in each subject
+
+const studentWithMarkInEachSubject = (choice, initialValue) => {
+  const students = classObj.students;
+
+  const markArray = subjects().map((sub) => {
+    let mark = initialValue;
+
+    students.map((student) => {
+      const subjects = student.marks;
+
+      subjects.find((subject) => {
+        if (sub === subject.subject) {
+          switch (choice) {
+            case "highest":
+              if (mark < subject.mark) mark = subject.mark;
+              break;
+
+            case "lowest":
+              if (mark > subject.mark) mark = subject.mark;
+              break;
+
+            default:
+              return "Sorry! choice not available, Please try with correct choice";
+          }
+        }
+      });
+    });
+
+    return { sub, mark };
+  });
+
+  return markArray;
+};
+
+//Function to find and print the student(s) who scored the lowest/highest marks in at least one subject.
+
+const studentWithMarkAtLeastOneSubject = (option, initialValue) => {
+  const students = classObj.students;
+  const highestMarkArray = [];
+  const highestMarks = studentWithMarkInEachSubject(option, initialValue);
+  let studentName = "";
+  let mark = 0;
+  let subjectName = "";
+
+  students.map((student) => {
+    const subjects = student.marks;
+    studentName = student.name;
+
+    highestMarks.map((highestMark) => {
+      subjects.filter((subject) => {
+        if (
+          highestMark.mark === subject.mark &&
+          highestMark.sub === subject.subject
+        ) {
+          mark = highestMark.mark;
+          subjectName = highestMark.sub;
+
+          highestMarkArray.push({ studentName, subjectName, mark });
+        }
+      });
+    });
+  });
+
+  return highestMarkArray;
+};
+
+//Q47: Write a function to find and print the student(s) who scored the Highest marks in at least one subject.
+
+const studentWithHighestMarkAtLeastOneSubject = () => {
+  const option = "highest";
+  const initialValue = 0;
+
+  return studentWithMarkAtLeastOneSubject(option, initialValue);
+};
+
+console.log(
+  "Highest mark atleast one subject",
+  studentWithHighestMarkAtLeastOneSubject()
+);
+
+//Q48: Write a function to find and print the student(s) who scored the lowest marks in at least one subject.
+
+const studentWithLowestMarkAtLeastOneSubject = () => {
+  const option = "lowest";
+  const initialValue = 50;
+
+  return studentWithMarkAtLeastOneSubject(option, initialValue);
+};
+
+console.log(
+  "Lowest mark atleast one subject",
+  studentWithLowestMarkAtLeastOneSubject()
+);
+
+//49: Write a function to calculate and print the total marks for each student
+
+const printStudentsMarksTotal = () => {
+  const students = classObj.students;
+  let totalMark = 0;
+
+  const totalMarksArray = students.map((student) => {
+    const subjects = student.marks;
+    let name = student.name;
+    totalMark = 0;
+
+    subjects.map((subject) => {
+      totalMark += subject.mark;
+    });
+
+    return { name, totalMark };
+  });
+
+  return totalMarksArray;
+};
+
+console.log(
+  "Total marks obtained for each students",
+  printStudentsMarksTotal()
+);
+
+//Q50: Write a function to calculate and print the average marks for each student.
+
+const printStudentsMarksAverage = () => {
+  const totalArray = printStudentsMarksTotal();
+  let average = 0;
+  let name = "";
+
+  return totalArray.map((total) => {
+    average = 0;
+
+    average = total.totalMark / subjects().length;
+    name = total.name;
+
+    return { name, average };
+  });
+};
+
+console.log(
+  "Average marks obtained for each students",
+  printStudentsMarksAverage()
+);
