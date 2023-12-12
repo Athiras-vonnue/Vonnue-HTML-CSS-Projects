@@ -304,7 +304,7 @@ const studentWithHighestTotal = () => {
 
 console.log(studentWithHighestTotal());
 
-//Q 14: Write a function to find and print the student with the lowest total marks.
+//Q14: Write a function to find and print the student with the lowest total marks.
 
 const studentWithLowestTotal = () => {
   let operation = "lowestTotal";
@@ -1111,7 +1111,7 @@ console.log(
 
 //49: Write a function to calculate and print the total marks for each student
 
-const printStudentsMarksTotalInEachSubject = () => {
+const printStudentsMarksTotal = () => {
   const students = classObj.students;
   let totalMark = 0;
 
@@ -1130,23 +1130,29 @@ const printStudentsMarksTotalInEachSubject = () => {
   return totalMarksArray;
 };
 
-console.log(printStudentsMarksTotalInEachSubject());
+console.log(
+  "Total marks obtained for each students",
+  printStudentsMarksTotal()
+);
 
 //Q50: Write a function to calculate and print the average marks for each student.
 
-const printStudentsMarksAverageInEachSubject = () => {
-  const totalArray = printStudentsMarksTotalInEachSubject();
+const printStudentsMarksAverage = () => {
+  const totalArray = printStudentsMarksTotal();
   let average = 0;
   let name = "";
 
   return totalArray.map((total) => {
     average = 0;
 
-    average = total.totalMark / totalArray.length;
+    average = total.totalMark / subjects().length;
     name = total.name;
 
     return { name, average };
   });
 };
 
-console.log(printStudentsMarksAverageInEachSubject());
+console.log(
+  "Average marks obtained for each students",
+  printStudentsMarksAverage()
+);
