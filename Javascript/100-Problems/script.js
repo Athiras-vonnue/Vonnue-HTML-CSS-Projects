@@ -1156,3 +1156,166 @@ console.log(
   "Average marks obtained for each students",
   printStudentsMarksAverage()
 );
+
+//Q51: Write a function to find and print the student(s) who scored the highest marks in each subject.
+
+console.log(
+  "Highest marks each subjects",
+  studentWithHighestMarkAtLeastOneSubject()
+);
+
+//Q52: Write a function to find and print the student(s) who scored the lowest marks in each subject.
+
+console.log(
+  "Lowest marks each subjects",
+  studentWithLowestMarkAtLeastOneSubject()
+);
+
+//Q53: Write a function to find and print the subject(s) in which the highest marks were scored.
+
+const subjectWithHighestMark = () => {
+  let highestMark = 0;
+
+  studentWithHighestMarkAtLeastOneSubject().map((mark) => {
+    if (mark.mark > highestMark) {
+      highestMark = mark.mark;
+    }
+  });
+
+  return studentWithHighestMarkAtLeastOneSubject().filter(
+    (mark) => mark.mark === highestMark
+  );
+};
+
+console.log("Subject with Highest Mark :", subjectWithHighestMark());
+
+//Q54: Write a function to find and print the subject(s) in which the lowest marks were scored.
+
+const subjectWithLowestMark = () => {
+  let highestMark = 50;
+
+  studentWithLowestMarkAtLeastOneSubject().map((mark) => {
+    if (mark.mark < highestMark) {
+      highestMark = mark.mark;
+    }
+  });
+
+  return studentWithLowestMarkAtLeastOneSubject().filter(
+    (mark) => mark.mark === highestMark
+  );
+};
+
+console.log("Subject with Lowest Mark :", subjectWithLowestMark());
+
+//Q55: Write a function to find and print the student(s) who scored above the class average marks.
+
+const studentsScoredAboveClassAverage = () => {
+  const classAverage = overallAvgMark();
+
+  return printStudentsMarksAverage().filter(
+    (student) => classAverage < student.average
+  );
+};
+
+console.log(
+  "Studnts scored above class average",
+  studentsScoredAboveClassAverage()
+);
+
+//Q56: Write a function to find and print the student(s) who scored above the class average marks.
+
+const studentsScoredBelowClassAverage = () => {
+  const classAverage = overallAvgMark();
+
+  return printStudentsMarksAverage().filter(
+    (student) => classAverage > student.average
+  );
+};
+
+console.log(
+  "Studnts scored below class average",
+  studentsScoredBelowClassAverage()
+);
+
+//Q57: Write a function to find and print the subject(s) in which the average marks are above the class average marks.
+
+const subjectsWithAverageScoredAboveClassAverage = () => {
+  const classAverage = overallAvgMark();
+
+  return avgMarkForSubjects().filter(
+    (subject) => classAverage < subject.average
+  );
+};
+
+console.log(
+  "Subjects scored Above class average",
+  subjectsWithAverageScoredAboveClassAverage()
+);
+
+//Q58: Write a function to find and print the subject(s) in which the average marks are above the class average marks.
+
+const subjectsWithAverageScoredBelowClassAverage = () => {
+  const classAverage = overallAvgMark();
+
+  return avgMarkForSubjects().filter(
+    (subject) => classAverage > subject.average
+  );
+};
+
+console.log(
+  "Subjects scored below class average",
+  subjectsWithAverageScoredBelowClassAverage()
+);
+
+//function to find and print the subject(s) in which the highest percentage of students scored above/below a certain mark.
+
+const subjectWithHighestPercentageBasedSpecificMark = (option) => {
+  const students = classObj.students;
+  const totalMark = 200;
+  const specificMark = 70;
+
+  switch (option) {
+    case "above":
+      return totalMarksForSubjects()
+        .filter(
+          (subject) =>
+            percentage(subject.totalObtained, totalMark).slice(0, -1) >=
+            specificMark
+        )
+        .map((subject) => {
+          return subject.name;
+        });
+
+      break;
+
+    case "below":
+      return totalMarksForSubjects()
+        .filter(
+          (subject) =>
+            percentage(subject.totalObtained, totalMark).slice(0, -1) <
+            specificMark
+        )
+        .map((subject) => {
+          return subject.name;
+        });
+
+      break;
+
+    default:
+      return "Sorry! option not available, Please enter the correct choice";
+  }
+};
+
+//Q59: Write a function to find and print the subject(s) in which the highest percentage of students scored above a certain mark.
+
+console.log(
+  "Subject with percentage scored above certain mark:",
+  subjectWithHighestPercentageBasedSpecificMark("above")
+);
+
+//Q60: Write a function to find and print the subject(s) in which the highest percentage of students scored below a certain mark.
+
+console.log(
+  "Subject with percentage scored below certain mark:",
+  subjectWithHighestPercentageBasedSpecificMark("below")
+);
